@@ -46,11 +46,11 @@ export function SectionHeading({
           className={cn(
             "display font-medium uppercase tracking-tighter2 leading-[0.95] text-foreground",
             size === "default" &&
-              "text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6.25rem]",
+              "text-4xl md:text-5xl lg:text-6xl xl:text-7xl",
             size === "lg" &&
-              "text-6xl md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem]",
+              "text-5xl md:text-6xl lg:text-7xl xl:text-8xl",
             size === "xl" &&
-              "text-7xl md:text-[6.5rem] lg:text-[8rem] xl:text-[9.5rem]"
+              "text-6xl md:text-7xl lg:text-8xl xl:text-[7rem]"
           )}
         >
           {eyebrow}

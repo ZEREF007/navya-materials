@@ -7,7 +7,7 @@ export function AboutStory({ compact = false }: { compact?: boolean }) {
     <section className={compact ? "py-16" : "py-14 md:py-20 lg:py-24"}>
       <Container>
         <Reveal>
-          <h2 className="display text-5xl md:text-7xl lg:text-8xl font-medium leading-[1.02] tracking-tighter2 text-foreground">
+          <h2 className="display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium uppercase leading-[0.95] tracking-tighter2 text-foreground">
             Our Story.
           </h2>
         </Reveal>
