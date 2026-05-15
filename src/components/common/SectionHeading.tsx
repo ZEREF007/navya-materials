@@ -2,21 +2,26 @@ import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
 type Props = {
+  /** Big section title, e.g. "Our Story" / "What We Do" / "Natural Fibers". */
   eyebrow?: string;
-  title: ReactNode;
+  /** Smaller italic tagline / subhead under the title. */
+  title?: ReactNode;
   lede?: ReactNode;
   align?: "left" | "center";
   className?: string;
   as?: "h1" | "h2" | "h3";
-  /** Visual scale. xl is reserved for hero-flanking section heads. */
+  /** Visual scale of the big title. */
   size?: "default" | "lg" | "xl";
 };
 
 /**
- * Editorial section heading. Big Fraunces display, with a thin sage rule
- * sitting above the type to mark the section break. Heading sizes are now
- * substantially larger than browser defaults — a section head should feel
- * close to a sub-hero, not like a card title.
+ * Editorial section heading. The label that used to live in the small eyebrow
+ * is now the actual heading: huge Fraunces display in title case. The italic
+ * tagline that used to be the headline is now the smaller subhead beneath it.
+ *
+ * Why: in the old version the eyebrow was a 14px label and the headline was
+ * a 96px italic, so the section identity ("Our Story", "What We Do") was the
+ * less-visible thing on the page. Flipped now.
  */
 export function SectionHeading({
   eyebrow,
@@ -37,31 +42,27 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <div
+        <Tag
           className={cn(
-            "flex items-center gap-4",
-            align === "center" && "justify-center"
+            "display font-medium uppercase tracking-tighter2 leading-[0.95] text-foreground",
+            size === "default" &&
+              "text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6.25rem]",
+            size === "lg" &&
+              "text-6xl md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem]",
+            size === "xl" &&
+              "text-7xl md:text-[6.5rem] lg:text-[8rem] xl:text-[9.5rem]"
           )}
         >
-          <span aria-hidden className="h-px w-10 bg-primary/70" />
-          <span className="eyebrow">{eyebrow}</span>
-        </div>
+          {eyebrow}
+        </Tag>
       ) : null}
-      <Tag
-        className={cn(
-          "display mt-6 md:mt-8 text-balance font-medium leading-[1.0] tracking-tighter2 text-foreground",
-          size === "default" &&
-            "text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.25rem]",
-          size === "lg" &&
-            "text-6xl md:text-8xl lg:text-[7rem] xl:text-[8rem]",
-          size === "xl" &&
-            "text-7xl md:text-[6.5rem] lg:text-[8rem] xl:text-[9.5rem]"
-        )}
-      >
-        {title}
-      </Tag>
+      {title ? (
+        <p className="mt-5 md:mt-6 text-pretty font-display italic text-2xl md:text-3xl lg:text-4xl font-light leading-[1.15] text-muted-foreground">
+          {title}
+        </p>
+      ) : null}
       {lede ? (
-        <p className="mt-8 max-w-2xl text-pretty text-lg md:text-xl leading-relaxed text-muted-foreground">
+        <p className="mt-7 max-w-2xl text-pretty text-base md:text-lg leading-relaxed text-foreground/75">
           {lede}
         </p>
       ) : null}
