@@ -24,8 +24,8 @@ Obsidian renders these as graph nodes. Wiki tags drive color groups in [graph vi
 
 | Slot | Asset | Used by |
 |---|---|---|
-| Hero photograph | [[banana-canopy]] (Unsplash 1653481006616) | [[Hero.tsx]] · poster fallback for future [[VideoLoop.tsx]] |
-| Hero video (TODO) | [[hero-video-pending]] — fiber-related, see [[future-videos]] | [[Hero.tsx]] |
+| Hero video | [[hero-banana-drone]] (YouTube `jqgev5A4tcg` — banana plantation drone) | [[Hero.tsx]] via [[YouTubeEmbed.tsx]] |
+| Hero poster fallback | [[banana-plantation]] (Unsplash 1653481006616) | [[Hero.tsx]] |
 
 ## Natural fibers
 
@@ -47,11 +47,11 @@ Obsidian renders these as graph nodes. Wiki tags drive color groups in [graph vi
 
 ## Stories (Community & Impact)
 
-| Story | Image | Used by |
-|---|---|---|
-| [[Story: by-product-to-income]] | [[farmers-in-field]] (Unsplash 1633410195091) | [[impact.ts]] → [[ImpactStats.tsx]] |
-| [[Story: women-led-fabrication]] | [[handspun-yarn]] (Unsplash 1488747279002) | same |
-| [[Story: allo-forward]] | [[prayer-flags]] (Unsplash 1731044900377) | same |
+| Story | Video | Poster image | Used by |
+|---|---|---|---|
+| [[Story: by-product-to-income]] | [[story-banana-extraction]] (`8_xwGtg-lag`) | [[farmers-in-field]] | [[impact.ts]] → [[ImpactStats.tsx]] |
+| [[Story: women-led-fabrication]] | [[story-nettle-spinning]] (`gMBrJHaqEiM`) | [[handspun-yarn]] | same |
+| [[Story: allo-forward]] | [[story-allo-craft]] (`MTJgT-B3O0w`) | [[prayer-flags]] | same |
 
 ## Products
 
