@@ -12,7 +12,7 @@ export default function Research() {
         path="/research"
       />
       <SubHero
-        eyebrow="Research & innovation"
+        eyebrow="Research and innovation"
         title={
           <>
             Science is{" "}

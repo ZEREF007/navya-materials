@@ -109,12 +109,7 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-eyebrow text-secondary;
-  }
-
-  .eyebrow::before {
-    content: "";
-    @apply inline-block h-px w-6 bg-secondary/60;
+    @apply inline-flex items-center gap-2 text-sm md:text-base font-semibold uppercase tracking-[0.16em] text-primary;
   }
 
   .section {

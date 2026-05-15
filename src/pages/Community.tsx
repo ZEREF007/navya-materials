@@ -12,7 +12,7 @@ export default function Community() {
         path="/community"
       />
       <SubHero
-        eyebrow="Community & impact"
+        eyebrow="Community and impact"
         title={
           <>
             Materials are{" "}
