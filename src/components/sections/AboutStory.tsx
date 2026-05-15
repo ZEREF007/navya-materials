@@ -14,23 +14,22 @@ export function AboutStory({ compact = false }: { compact?: boolean }) {
           </Reveal>
           <Reveal delay={0.1} className="md:col-span-7 lg:col-span-7 lg:col-start-6 space-y-6 text-pretty text-base md:text-lg leading-relaxed text-foreground/80">
             <p>
-              We are <strong className="font-medium text-foreground">Navya Engineering Solution</strong> —
-              founded in 2023 by mechanical engineer <em>Roshan Ojha</em> and team, driven by a
-              shared vision: turn Nepal&apos;s untapped natural resources into meaningful,
+              We are <strong className="font-medium text-foreground">Navya Engineering Solution</strong>.
+              The company was founded in 2023 by mechanical engineer <em>Roshan Ojha</em> and team,
+              with one goal: turn Nepal&apos;s untapped natural resources into useful,
               sustainable material systems.
             </p>
             <p>
-              The journey began with a simple observation: large amounts of agricultural
-              waste — especially banana pseudo-stems — were being discarded after harvest,
-              despite strong potential for value creation. Through experimentation, we found
-              the waste could be transformed into a natural fiber suitable for textile
-              applications. That became our foundation.
+              The story began with a simple observation. Large amounts of agricultural waste,
+              especially banana pseudo-stems, were being thrown away after harvest, even though
+              they had clear value. Through experimentation we found the waste could be turned
+              into a natural fiber suitable for textiles. That became our foundation.
             </p>
             <p>
-              From there we&apos;ve grown into a platform for fiber research, processing
-              technology, and community-rooted manufacturing — collaborating with farmers,
-              women&apos;s groups, academic partners, and industry across Nepal to build a
-              decentralized, ecologically grounded materials economy.
+              Today we work as a platform for fiber research, processing technology, and
+              community-rooted manufacturing. We collaborate with farmers, women&apos;s groups,
+              academic partners, and industry across Nepal to build a decentralized, ecologically
+              grounded materials economy.
             </p>
           </Reveal>
         </div>

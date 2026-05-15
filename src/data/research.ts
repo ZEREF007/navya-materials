@@ -3,19 +3,19 @@ export type FocusArea = { title: string; body: string };
 export const focusAreas: FocusArea[] = [
   {
     title: "Material Science",
-    body: "Characterizing tensile strength, fineness, moisture regain, and dyeability of native bast fibers.",
+    body: "We characterize tensile strength, fineness, moisture regain, and dyeability of native bast fibers.",
   },
   {
     title: "Process Engineering",
-    body: "Optimizing retting, decortication, and degumming — designing low-energy methods for rural deployment.",
+    body: "We optimize retting, decortication, and degumming, with low-energy methods designed for rural deployment.",
   },
   {
     title: "Lifecycle Analysis",
-    body: "Measuring water, energy, and carbon footprints across the full fiber-to-product chain.",
+    body: "We measure water, energy, and carbon footprints across the full fiber-to-product chain.",
   },
   {
     title: "Bio-composite Design",
-    body: "Combining plant fibers with bio-resins to engineer panels, tiles, and structural elements.",
+    body: "We combine plant fibers with bio-resins to engineer panels, tiles, and structural elements.",
   },
 ];
 
@@ -25,21 +25,21 @@ export const methodology: Method[] = [
   {
     step: "01",
     title: "Source",
-    body: "Identify under-utilized agricultural residues and traditional fiber crops with viable supply.",
+    body: "We identify agricultural residues and traditional fiber crops with a viable, ongoing supply.",
   },
   {
     step: "02",
     title: "Characterize",
-    body: "Lab-test fiber properties and benchmark against existing industrial inputs.",
+    body: "We test fiber properties in the lab and benchmark them against existing industrial inputs.",
   },
   {
     step: "03",
     title: "Engineer",
-    body: "Develop processing equipment and protocols for community-scale production.",
+    body: "We develop processing equipment and protocols built for community-scale production.",
   },
   {
     step: "04",
     title: "Pilot",
-    body: "Run small-batch production with farmer and fabricator partners — measure, refine, repeat.",
+    body: "We run small batches with farmer and fabricator partners, then measure, refine, and repeat.",
   },
 ];

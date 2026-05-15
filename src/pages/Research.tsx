@@ -7,8 +7,8 @@ export default function Research() {
   return (
     <>
       <Seo
-        title="Research & Innovation — Navya Materials"
-        description="Material science, process engineering, lifecycle analysis, and bio-composite design — research focused on locally adaptable, sustainable material systems."
+        title="Research and Innovation"
+        description="Material science, process engineering, lifecycle analysis, and bio-composite design, research focused on locally adaptable, sustainable material systems."
         path="/research"
       />
       <SubHero
@@ -19,7 +19,7 @@ export default function Research() {
             <span className="italic font-light">how nature gets translated.</span>
           </>
         }
-        lede="Our research bridges lab and field — characterising indigenous fibers, engineering low-energy processing, and measuring the full lifecycle of what we make."
+        lede="Our research bridges lab and field, characterising indigenous fibers, engineering low-energy processing, and measuring the full lifecycle of what we make."
         image="https://images.unsplash.com/photo-1707978932202-751b08324daf?auto=format&fit=crop&w=2880&q=90"
         imageAlt="Vintage textile machinery close-up"
         meta={[

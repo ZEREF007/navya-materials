@@ -7,8 +7,8 @@ export default function NaturalFibers() {
   return (
     <>
       <Seo
-        title="Natural Fibers — Banana, Hemp, Himalayan Nettle"
-        description="Our three flagship natural fibers — banana pseudo-stem, hemp, and Himalayan nettle (allo) — characterized, processed, and prepared for sustainable products."
+        title="Natural Fibers"
+        description="Our three flagship natural fibers, banana pseudo-stem, hemp, and Himalayan nettle (allo), characterized, processed, and prepared for sustainable products."
         path="/natural-fibers"
       />
       <SubHero

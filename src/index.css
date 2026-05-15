@@ -81,7 +81,7 @@
     font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 0;
   }
 
-  /* Custom cursor — hide native on pointer:fine devices */
+  /* Custom cursor: hide native on pointer:fine devices */
   body.custom-cursor-on,
   body.custom-cursor-on * {
     cursor: none !important;

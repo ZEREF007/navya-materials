@@ -19,7 +19,7 @@ export function WhatWeDo() {
                 </span>
               </>
             }
-            lede="From plant to processed fiber to finished form — we work across the chain so that local materials can carry both story and performance."
+            lede="Plant, processed fiber, finished form. We work across the chain so local materials can carry both story and performance."
             size="lg"
           />
         </Reveal>

@@ -5,7 +5,7 @@ export function Logo({ className, mono = false }: { className?: string; mono?: b
   return (
     <Link
       to="/"
-      aria-label="Navya Materials — home"
+      aria-label="Navya Materials home"
       className={cn("group inline-flex items-center gap-3", className)}
     >
       <span

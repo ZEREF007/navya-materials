@@ -12,7 +12,7 @@ export const products: Product[] = [
     name: "Banana-fiber Textile",
     category: "Textile",
     status: "Pilot",
-    body: "A naturally lustrous, biodegradable fabric spun from banana pseudo-stem fiber. Suited to apparel, home goods, and craft accessories.",
+    body: "A naturally lustrous, biodegradable fabric spun from banana pseudo-stem fiber. Works for apparel, home goods, and craft accessories.",
     image:
       "https://images.unsplash.com/photo-1569909115134-a0426936c879?auto=format&fit=crop&w=2000&q=90",
     alt: "Stack of natural-colour textiles",
@@ -21,7 +21,7 @@ export const products: Product[] = [
     name: "Hemp Composite Board",
     category: "Construction",
     status: "Prototype",
-    body: "Low-carbon hemp-bonded panel for interior partitions, insulation, and modular furniture.",
+    body: "A low-carbon hemp-bonded panel for interior partitions, insulation, and modular furniture.",
     image:
       "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=2000&q=90",
     alt: "Hemp composite board sample",
@@ -30,7 +30,7 @@ export const products: Product[] = [
     name: "Allo Heritage Yarn",
     category: "Textile",
     status: "Pilot",
-    body: "Hand-processed Himalayan nettle yarn in heritage counts — for designers building traceable collections.",
+    body: "Hand-processed Himalayan nettle yarn in heritage counts, for designers building traceable collections.",
     image:
       "https://images.unsplash.com/photo-1488747279002-c8523379faaa?auto=format&fit=crop&w=2000&q=90",
     alt: "Hand-spun heritage yarn",
@@ -39,7 +39,7 @@ export const products: Product[] = [
     name: "Rural Decorticator",
     category: "Machinery",
     status: "In R&D",
-    body: "Compact, manually-operable fiber extraction unit designed for rural workshops without grid power.",
+    body: "A compact, manually operable fiber extraction unit designed for rural workshops without grid power.",
     image:
       "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2000&q=90",
     alt: "Compact fiber processing machine",
@@ -57,7 +57,7 @@ export const products: Product[] = [
     name: "Mixed-Fiber Cordage",
     category: "Industrial",
     status: "Prototype",
-    body: "Blended hemp + allo cordage for industrial and agricultural use — strong, biodegradable, locally produced.",
+    body: "Blended hemp and allo cordage for industrial and agricultural use. Strong, biodegradable, locally produced.",
     image:
       "https://images.unsplash.com/photo-1535970793482-07de93762dc4?auto=format&fit=crop&w=2000&q=90",
     alt: "Natural rope and cordage",

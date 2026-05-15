@@ -9,17 +9,17 @@ export type Pillar = {
 export const pillars: Pillar[] = [
   {
     title: "Natural Fiber Innovation",
-    body: "Exploring the potential of local fibers for global impact.",
+    body: "Local fibers, with global reach.",
     icon: Leaf,
   },
   {
     title: "Research Driven",
-    body: "Science, experimentation, and continuous iteration.",
+    body: "Science, experimentation, and steady iteration.",
     icon: FlaskConical,
   },
   {
     title: "Community Empowerment",
-    body: "Working with rural communities — especially women and farmers.",
+    body: "Working with rural communities, especially women and farmers.",
     icon: Users,
   },
   {

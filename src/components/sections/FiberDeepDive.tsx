@@ -57,7 +57,7 @@ export function FiberDeepDive() {
                       <ul className="mt-3 space-y-1.5 text-sm">
                         {f.properties.map((p) => (
                           <li key={p} className="text-foreground/85">
-                            — {p}
+                            · {p}
                           </li>
                         ))}
                       </ul>
@@ -69,7 +69,7 @@ export function FiberDeepDive() {
                       <ul className="mt-3 space-y-1.5 text-sm">
                         {f.uses.map((u) => (
                           <li key={u} className="text-foreground/85">
-                            — {u}
+                            · {u}
                           </li>
                         ))}
                       </ul>

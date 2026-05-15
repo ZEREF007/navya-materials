@@ -9,8 +9,8 @@ export default function Collaborate() {
   return (
     <>
       <Seo
-        title="Collaborate with Us — Navya Materials"
-        description="Research partnerships, product manufacturing, material development, community programmes, investment, brand collaboration — six ways to work with Navya Materials."
+        title="Collaborate with Us"
+        description="Research partnerships, product manufacturing, material development, community programmes, investment, brand collaboration, six ways to work with Navya Materials."
         path="/collaborate"
       />
       <SubHero
@@ -36,7 +36,7 @@ export default function Collaborate() {
               <span className="italic font-light">We&apos;ll take it from there.</span>
             </h2>
             <p className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
-              Brief or detailed, exploratory or specific — every collaboration starts with a
+              Brief or detailed, exploratory or specific, every collaboration starts with a
               short note. We respond within 3 working days.
             </p>
           </Reveal>

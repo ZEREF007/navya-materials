@@ -15,8 +15,8 @@ export function MapEmbed() {
               </h2>
             </div>
             <p className="text-base text-muted-foreground leading-relaxed md:max-w-md md:justify-self-end">
-              Our workshop and team are based in Koteshowor. Visits are by appointment —
-              get in touch and we&apos;ll be happy to host you.
+              Our workshop and team are based in Koteshowor. Visits are by appointment.
+              Get in touch and we&apos;ll be happy to host you.
             </p>
           </div>
         </Reveal>
@@ -25,7 +25,7 @@ export function MapEmbed() {
           <div className="relative overflow-hidden rounded-3xl border border-foreground/10">
             <div className="aspect-[16/9] w-full bg-forest-100">
               <iframe
-                title="Navya Materials — Kathmandu location"
+                title="Navya Materials, Kathmandu location"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=85.3380%2C27.6760%2C85.3580%2C27.6900&amp;layer=mapnik&amp;marker=27.6830%2C85.3480"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

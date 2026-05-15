@@ -27,17 +27,17 @@ export function FounderCard() {
           <Reveal delay={0.1} className="md:col-span-7">
             <Quote className="h-10 w-10 text-primary/30" />
             <p className="mt-6 font-display text-2xl md:text-3xl lg:text-4xl font-light italic leading-[1.2] text-foreground">
-              &ldquo;The materials of the next century already exist — in the fields, the
-              forests, and the hands of the people who&apos;ve always worked with them. Our
-              job is to engineer the bridge from that knowledge to the world that needs it.&rdquo;
+              &ldquo;The materials of the next century already exist. They are in the fields,
+              the forests, and the hands of the people who have always worked with them. Our
+              job is to build the bridge from that knowledge to the world that needs it.&rdquo;
             </p>
             <p className="mt-8 text-sm uppercase tracking-eyebrow text-muted-foreground">
-              — Roshan Ojha, Founder
+              Roshan Ojha, Founder
             </p>
             <p className="mt-6 max-w-xl text-base text-muted-foreground leading-relaxed">
-              Roshan founded Navya Engineering Solution in 2023 after years of fieldwork
+              Roshan founded Navya Engineering Solution in 2023, after years of fieldwork
               across Nepal&apos;s agricultural belts. His background combines mechanical
-              engineering with a deep belief that meaningful technology must be locally
+              engineering with a strong belief that good technology has to be locally
               adaptable.
             </p>
           </Reveal>

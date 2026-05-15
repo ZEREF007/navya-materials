@@ -174,3 +174,23 @@ Files touched: `src/index.css`, `src/components/sections/Hero.tsx` (hero-section
 Test: `pnpm build` → ✓ 2012 modules in 1.81s. CSS 36.91 KB (gz 7.47).
 Next: commit + push
 
+
+---
+
+## [2026-05-16 00:30] phase1.7-naturalize | Em-dash purge + naturalize voice + simple cursor
+
+Status: done
+Files touched:
+- `src/data/{fibers,pillars,whatWeDo,collaborate,research,products,stats,impact}.ts` (em-dashes removed, copy rewritten in plain voice)
+- `src/components/sections/{Hero,AboutStory,CollaborateAreas,FiberDeepDive,FibersGrid,FounderCard,MapEmbed,WhatWeDo,ContactForm}.tsx` (em-dashes → commas / periods / parentheticals; FiberDeepDive list bullets em-dash → middot)
+- `src/components/layout/Footer.tsx` (3 em-dashes replaced)
+- `src/components/common/{Logo,Cursor}.tsx` (em-dashes in aria-label + comment)
+- `src/lib/seo.tsx` (separator changed ` — ` → ` · `, DEFAULT_DESC rewritten)
+- `src/pages/*.tsx` (Seo titles cleaned + em-dashes purged via sed pass)
+- `src/index.css` (comment em-dash)
+- `index.html` (description + title em-dashes)
+- `src/components/common/Cursor.tsx` (rewritten: simple sage circle with cream halo + soft shadow; no wobble, no trailing dot, no rotation)
+- `wiki/assets/videos/` (YT stubs deleted; README placeholder added)
+Test: `pnpm build` → ✓ 2014 modules in 2.01s, no errors. `grep -rn "—" src/ index.html` → empty.
+Next: commit + push + deploy
+

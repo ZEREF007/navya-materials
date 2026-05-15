@@ -28,7 +28,7 @@ export function Hero() {
       >
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1653481006616-aab561a77a3b?auto=format&fit=crop&w=2880&q=90"
-          alt="Banana plantation — source of natural pseudo-stem fiber"
+          alt="Banana plantation, the source of natural pseudo-stem fiber"
           className="h-full w-full object-cover"
           loading="eager"
           fetchPriority="high"
@@ -78,8 +78,9 @@ export function Hero() {
             }}
             className="mt-7 max-w-2xl text-pretty text-base md:text-lg lg:text-xl text-sand-100/85 leading-relaxed"
           >
-            Research. Innovate. Sustain. Empowering rural communities and crafting
-            biodegradable solutions from the natural fibers of Nepal.
+            We work with natural fibers from Nepal: banana, hemp, and Himalayan nettle.
+            The goal is biodegradable materials for textiles, construction, and beyond,
+            built with the rural communities that grow them.
           </motion.p>
 
           <motion.div

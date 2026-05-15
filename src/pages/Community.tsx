@@ -7,7 +7,7 @@ export default function Community() {
   return (
     <>
       <Seo
-        title="Community & Impact — Navya Materials"
+        title="Community and Impact"
         description="Working alongside farmers, women-led groups, and rural fabricators across Nepal. Decentralised production. Shared livelihoods. Local material economies."
         path="/community"
       />
@@ -19,7 +19,7 @@ export default function Community() {
             <span className="italic font-light">made by people.</span>
           </>
         }
-        lede="Our work is built on relationships with farmers, women-led groups, and rural fabricators — distributed production, shared value, and skill exchange in both directions."
+        lede="Our work is built on relationships with farmers, women-led groups, and rural fabricators, distributed production, shared value, and skill exchange in both directions."
         image="https://images.unsplash.com/photo-1633410195091-bd66114cef5f?auto=format&fit=crop&w=2880&q=90"
         imageAlt="Group of farmers working in a field"
         meta={[
@@ -32,7 +32,7 @@ export default function Community() {
       <ImpactStats />
       <CTASection
         title="Partner on a community programme."
-        body="Development agencies, foundations, and NGOs — we'd love to scale skill-sharing and shared infrastructure together."
+        body="Development agencies, foundations, and NGOs, we'd love to scale skill-sharing and shared infrastructure together."
         primary={{ href: "/collaborate", label: "Get involved" }}
         secondary={{ href: "/contact", label: "Contact" }}
       />

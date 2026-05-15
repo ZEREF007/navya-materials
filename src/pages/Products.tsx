@@ -7,8 +7,8 @@ export default function Products() {
   return (
     <>
       <Seo
-        title="Products — Navya Materials"
-        description="Prototypes, pilot products, and in-R&D materials — from banana-fiber textile to hemp composite boards and rural decortication machinery."
+        title="Products"
+        description="Prototypes, pilot products, and in-R&D materials, from banana-fiber textile to hemp composite boards and rural decortication machinery."
         path="/products"
       />
       <SubHero
@@ -32,7 +32,7 @@ export default function Products() {
       <ProductsGrid />
       <CTASection
         title="Custom development?"
-        body="We co-develop materials with brands, designers, and manufacturers. Bring a spec — or just a question — and we'll explore."
+        body="We co-develop materials with brands, designers, and manufacturers. Bring a spec, or just a question, and we'll explore."
         primary={{ href: "/collaborate", label: "Start a project" }}
         secondary={{ href: "/contact", label: "Contact" }}
       />

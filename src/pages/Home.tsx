@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Navya Materials — Engineering the Future of Sustainable Materials"
-        description="Nepal-rooted research and engineering on natural fibers — banana, hemp, Himalayan nettle — for textiles, construction, and bio-based materials."
+        title="Navya Materials. Engineering the Future of Sustainable Materials"
+        description="Nepal-rooted research and engineering on natural fibers, banana, hemp, Himalayan nettle, for textiles, construction, and bio-based materials."
       />
       <Hero />
       <PillarsStrip />
@@ -21,7 +21,7 @@ export default function Home() {
       <AboutStory />
       <StatsStrip />
       <CTASection
-        title="Build something with us — from fiber to finished form."
+        title="Build something with us, from fiber to finished form."
         body="Whether you're a brand, a researcher, an investor, or a community partner, there's a way in."
         primary={{ href: "/collaborate", label: "Collaborate with us" }}
         secondary={{ href: "/contact", label: "Get in touch" }}

@@ -10,7 +10,7 @@ export const services: Service[] = [
   {
     number: "01",
     title: "Natural Fiber Research",
-    body: "Studying, extracting, and developing high-performance fibers from local plants.",
+    body: "We study, extract, and develop high-performance fibers from plants that grow nearby.",
     image:
       "https://images.unsplash.com/photo-1646750421466-a04e689254d4?auto=format&fit=crop&w=2000&q=90",
     alt: "Close-up of woven natural fiber threads",
@@ -18,7 +18,7 @@ export const services: Service[] = [
   {
     number: "02",
     title: "Textile Innovation",
-    body: "From fiber to yarn to fabric — creating sustainable textile alternatives.",
+    body: "From fiber to yarn to fabric. We build sustainable textile alternatives at every step.",
     image:
       "https://images.unsplash.com/photo-1643766883805-829d9ad95c42?auto=format&fit=crop&w=2000&q=90",
     alt: "Colorful weaving loom at work",
@@ -26,15 +26,15 @@ export const services: Service[] = [
   {
     number: "03",
     title: "Bio-based Materials",
-    body: "Eco-friendly composites for construction and industrial applications.",
+    body: "Eco-friendly composites for construction and industrial use.",
     image:
       "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=2000&q=90",
     alt: "Hemp construction material samples",
   },
   {
     number: "04",
-    title: "Technology & Machinery",
-    body: "Designing and building machines for rural fiber processing and production.",
+    title: "Technology and Machinery",
+    body: "Designing and building machines for rural fiber processing and small-scale production.",
     image:
       "https://images.unsplash.com/photo-1707978932202-751b08324daf?auto=format&fit=crop&w=2000&q=90",
     alt: "Vintage weaving machinery close-up",
@@ -42,7 +42,7 @@ export const services: Service[] = [
   {
     number: "05",
     title: "Applied Engineering",
-    body: "Engineering solutions that improve lives in rural and industrial contexts.",
+    body: "Engineering that solves real problems in rural and industrial settings.",
     image:
       "https://images.unsplash.com/photo-1623220940666-f4bcc07aaed9?auto=format&fit=crop&w=2000&q=90",
     alt: "Engineer working on mechanical equipment",

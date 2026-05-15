@@ -18,16 +18,16 @@ export const fibers: Fiber[] = [
     name: "Banana Fiber",
     scientific: "Musa spp. pseudo-stem",
     origin: "Lowland Nepal",
-    tagline: "Waste reborn as fiber.",
+    tagline: "Waste, reborn as fiber.",
     description:
-      "Banana fiber is extracted from the pseudo-stem of banana plants — agricultural matter that would otherwise be discarded after harvest. Strong, biodegradable, and naturally glossy, it suits textiles, ropes, paper, and composite materials. Working with smallholder farmers turns a by-product into a second income stream.",
+      "Banana fiber comes from the pseudo-stem of banana plants, the part farmers usually leave in the field after harvest. It is strong, biodegradable, and naturally glossy, which makes it well suited to textiles, ropes, paper, and composite materials. Using it turns a by-product into a second source of income for smallholder farms.",
     properties: [
       "High tensile strength",
       "Biodegradable",
       "Naturally lustrous",
-      "Absorbs dye well",
+      "Takes dye well",
     ],
-    uses: ["Textiles", "Ropes & twine", "Specialty paper", "Composite boards"],
+    uses: ["Textiles", "Ropes and twine", "Specialty paper", "Composite boards"],
     image:
       "https://images.unsplash.com/photo-1653481006616-aab561a77a3b?auto=format&fit=crop&w=2880&q=90",
     imageAlt: "Banana plantation seen through broad green leaves",
@@ -40,14 +40,14 @@ export const fibers: Fiber[] = [
     origin: "Mid-hills, Nepal",
     tagline: "Low input. Long memory.",
     description:
-      "Hemp grows quickly with minimal water, no pesticides, and improves the soil it leaves behind. Its bast fiber is among the strongest natural fibers in the world — equally suited to fine apparel, durable canvas, and bio-composites for construction.",
+      "Hemp grows quickly with very little water and no pesticides, and it improves the soil it leaves behind. The bast fiber from its stem is among the strongest natural fibers in the world. It works for fine apparel, durable canvas, and bio-composites for construction.",
     properties: [
       "Drought-tolerant crop",
       "No pesticide required",
-      "UV & mould resistant",
+      "UV and mould resistant",
       "Improves over washing",
     ],
-    uses: ["Apparel & textiles", "Construction composites", "Bio-plastics", "Cordage"],
+    uses: ["Apparel and textiles", "Construction composites", "Bio-plastics", "Cordage"],
     image:
       "https://images.unsplash.com/photo-1532765488483-62ff440ee4fd?auto=format&fit=crop&w=2880&q=90",
     imageAlt: "Green hemp plants growing in daylight",
@@ -58,16 +58,16 @@ export const fibers: Fiber[] = [
     name: "Himalayan Nettle (Allo)",
     scientific: "Girardinia diversifolia",
     origin: "Himalayan foothills",
-    tagline: "Indigenous knowledge, refined.",
+    tagline: "Old knowledge, refined.",
     description:
-      "Allo is a wild Himalayan nettle, hand-harvested and processed by mountain communities for generations. The fiber is fine, strong, and naturally resistant to moisture and pests. It carries a story — and a craft economy — into every meter of cloth.",
+      "Allo is a wild Himalayan nettle. Mountain communities have hand-harvested and hand-processed it for generations. The fiber is fine, strong, and naturally resistant to moisture and pests. Every meter of cloth carries that craft history with it.",
     properties: [
       "Hand-processed",
       "Naturally pest-resistant",
       "Soft handfeel after retting",
       "Carbon-neutral harvest",
     ],
-    uses: ["Heritage textiles", "Handicrafts", "Ropes & sacking", "Mixed-fiber yarns"],
+    uses: ["Heritage textiles", "Handicrafts", "Ropes and sacking", "Mixed-fiber yarns"],
     image:
       "https://images.unsplash.com/photo-1681635851078-57a587a6c2d8?auto=format&fit=crop&w=2880&q=90",
     imageAlt: "Snow-capped Himalayan mountain range",

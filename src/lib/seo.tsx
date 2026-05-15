@@ -9,11 +9,11 @@ type Props = {
 
 const SITE = "https://navyamaterials.com";
 const DEFAULT_DESC =
-  "Navya Materials — engineering the future of sustainable materials from natural fibers, rooted in Nepal.";
+  "Navya Materials. Engineering the future of sustainable materials from natural fibers, rooted in Nepal.";
 
 export function Seo({ title, description = DEFAULT_DESC, path = "/", image = "/og-image.jpg" }: Props) {
   const url = `${SITE}${path}`;
-  const fullTitle = title.includes("Navya") ? title : `${title} — Navya Materials`;
+  const fullTitle = title.includes("Navya") ? title : `${title} · Navya Materials`;
   return (
     <Helmet>
       <title>{fullTitle}</title>

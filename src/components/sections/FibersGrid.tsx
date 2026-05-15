@@ -20,7 +20,7 @@ export function FibersGrid({ preview = false }: { preview?: boolean }) {
                   Three plants. <span className="italic font-light">Endless possibility.</span>
                 </>
               }
-              lede="Each fiber in our portfolio is selected because it solves more than one problem at once — for the land, the maker, and the material it becomes."
+              lede="Every fiber we work with solves more than one problem at once: for the land, for the maker, and for the material it becomes."
               size="lg"
             />
             {preview ? (

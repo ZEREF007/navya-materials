@@ -10,8 +10,8 @@ export default function Contact() {
   return (
     <>
       <Seo
-        title="Contact — Navya Materials"
-        description="Get in touch with Navya Materials — Kathmandu, Nepal. Email, WhatsApp, and visits welcome by appointment."
+        title="Contact"
+        description="Get in touch with Navya Materials, Kathmandu, Nepal. Email, WhatsApp, and visits welcome by appointment."
         path="/contact"
       />
       <SubHero

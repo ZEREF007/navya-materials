@@ -10,8 +10,8 @@ export default function About() {
   return (
     <>
       <Seo
-        title="About — Navya Materials"
-        description="Navya Engineering Solution — founded 2023 in Kathmandu by Roshan Ojha. Engineering, research, and community collaboration for sustainable materials."
+        title="About"
+        description="Navya Engineering Solution, founded 2023 in Kathmandu by Roshan Ojha. Engineering, research, and community collaboration for sustainable materials."
         path="/about"
       />
       <SubHero
@@ -21,7 +21,7 @@ export default function About() {
             A materials platform <span className="italic font-light">rooted in Nepal.</span>
           </>
         }
-        lede="We turn under-utilised natural resources into engineered, sustainable materials — built in partnership with the communities that grow and gather them."
+        lede="We turn under-utilised natural resources into engineered, sustainable materials, built in partnership with the communities that grow and gather them."
         image="https://images.unsplash.com/photo-1681635851078-57a587a6c2d8?auto=format&fit=crop&w=2880&q=90"
         imageAlt="Snow-capped Himalayan mountain range over Nepal"
         meta={[
@@ -37,7 +37,7 @@ export default function About() {
       <Timeline />
       <CTASection
         title="Want to work together?"
-        body="From research collaborations to manufacturing partnerships — we're open to conversations that lead to real-world impact."
+        body="From research collaborations to manufacturing partnerships, we're open to conversations that lead to real-world impact."
         primary={{ href: "/collaborate", label: "Collaborate with us" }}
         secondary={{ href: "/contact", label: "Contact" }}
       />

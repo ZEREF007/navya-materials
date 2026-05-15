@@ -22,7 +22,7 @@ export function Footer() {
           <div className="space-y-6">
             <Logo mono />
             <p className="max-w-sm text-pretty text-base text-sand-200/85 leading-relaxed">
-              Engineering the future of sustainable materials — from natural fibers grown,
+              Engineering the future of sustainable materials, from natural fibers grown,
               gathered, and refined in Nepal.
             </p>
             <div className="space-y-3 text-sm text-sand-200/80">
@@ -93,7 +93,7 @@ export function Footer() {
               Newsletter
             </p>
             <p className="text-xs text-sand-200/70 leading-relaxed">
-              Updates on research, products, and partner opportunities — roughly quarterly.
+              Updates on research, products, and partner opportunities, roughly quarterly.
               Email us to subscribe.
             </p>
           </div>
@@ -101,7 +101,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col gap-4 border-t border-sand-100/10 pt-8 md:flex-row md:items-center md:justify-between">
           <p className="text-xs text-sand-200/70">
-            © {new Date().getFullYear()} Navya Engineering Solution. Based in Nepal — working
+            © {new Date().getFullYear()} Navya Engineering Solution. Based in Nepal. Working
             toward sustainable material innovation through natural fibers and engineering.
           </p>
           <p className="text-xs text-sand-200/60 font-mono">

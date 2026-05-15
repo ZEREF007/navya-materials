@@ -12,11 +12,11 @@ export function CollaborateAreas() {
             eyebrow="Areas of collaboration"
             title={
               <>
-                We grow stronger together — with{" "}
+                We grow stronger together. With{" "}
                 <span className="italic font-light">researchers, makers, and movers.</span>
               </>
             }
-            lede="Six entry points to working with us. Whatever you bring — knowledge, equipment, capital, an audience — there is a way in."
+            lede="Six entry points to working with us. Whatever you bring (knowledge, equipment, capital, an audience), there is a way in."
             size="lg"
           />
         </Reveal>
