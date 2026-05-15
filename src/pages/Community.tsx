@@ -1,6 +1,7 @@
 import { Seo } from "@/lib/seo";
 import { SubHero } from "@/components/sections/SubHero";
 import { ImpactStats } from "@/components/sections/ImpactStats";
+import { PullQuote } from "@/components/sections/PullQuote";
 import { CTASection } from "@/components/sections/CTASection";
 
 export default function Community() {
@@ -30,6 +31,10 @@ export default function Community() {
         ]}
       />
       <ImpactStats />
+      <PullQuote
+        variant="dark"
+        quote="Decentralized production means a workshop in a village, not a factory in a city. The skill stays where the plant grows."
+      />
       <CTASection
         title="Partner on a community programme."
         body="Development agencies, foundations, and NGOs, we'd love to scale skill-sharing and shared infrastructure together."

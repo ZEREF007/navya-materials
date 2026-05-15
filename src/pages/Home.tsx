@@ -1,11 +1,14 @@
 import { Seo } from "@/lib/seo";
 import { Hero } from "@/components/sections/Hero";
 import { PillarsStrip } from "@/components/sections/PillarsStrip";
+import { MarqueeStrip } from "@/components/sections/MarqueeStrip";
 import { WhatWeDo } from "@/components/sections/WhatWeDo";
 import { FibersGrid } from "@/components/sections/FibersGrid";
 import { AboutStory } from "@/components/sections/AboutStory";
+import { PullQuote } from "@/components/sections/PullQuote";
 import { StatsStrip } from "@/components/sections/StatsStrip";
 import { CTASection } from "@/components/sections/CTASection";
+import { OrganicDivider } from "@/components/common/OrganicDivider";
 
 export default function Home() {
   return (
@@ -16,9 +19,15 @@ export default function Home() {
       />
       <Hero />
       <PillarsStrip />
+      <MarqueeStrip />
       <WhatWeDo />
       <FibersGrid preview />
       <AboutStory />
+      <OrganicDivider />
+      <PullQuote
+        quote="The materials of the next century already exist. They are in the fields, the forests, and the hands of the people who have always worked with them."
+        attribution="Roshan Ojha, Founder"
+      />
       <StatsStrip />
       <CTASection
         title="Build something with us, from fiber to finished form."

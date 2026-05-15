@@ -1,5 +1,6 @@
 import { Container } from "@/components/common/Container";
 import { Reveal } from "@/components/common/Reveal";
+import { NumberTicker } from "@/components/common/NumberTicker";
 import { stats } from "@/data/stats";
 
 export function StatsStrip() {
@@ -12,9 +13,9 @@ export function StatsStrip() {
             <Reveal key={s.label} delay={i * 0.05}>
               <div>
                 <p className="display text-5xl md:text-6xl lg:text-7xl font-light leading-none tracking-tightish">
-                  {s.value}
+                  <NumberTicker value={s.value} />
                 </p>
-                <p className="mt-3 text-[11px] uppercase tracking-eyebrow text-sand-200/80">
+                <p className="mt-3 text-sm uppercase tracking-[0.18em] font-semibold text-sand-100">
                   {s.label}
                 </p>
                 {s.suffix ? (

@@ -4,7 +4,9 @@ import { AboutStory } from "@/components/sections/AboutStory";
 import { FounderCard } from "@/components/sections/FounderCard";
 import { Timeline } from "@/components/sections/Timeline";
 import { PillarsStrip } from "@/components/sections/PillarsStrip";
+import { MarqueeStrip } from "@/components/sections/MarqueeStrip";
 import { CTASection } from "@/components/sections/CTASection";
+import { OrganicDivider } from "@/components/common/OrganicDivider";
 
 export default function About() {
   return (
@@ -32,8 +34,12 @@ export default function About() {
         ]}
       />
       <AboutStory compact />
+      <MarqueeStrip
+        items={["Engineering", "Research", "Community", "Honest Materials", "Nepal"]}
+      />
       <FounderCard />
       <PillarsStrip />
+      <OrganicDivider />
       <Timeline />
       <CTASection
         title="Want to work together?"
