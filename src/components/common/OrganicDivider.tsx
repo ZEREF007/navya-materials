@@ -6,12 +6,11 @@ type Props = {
 };
 
 /**
- * Organic SVG divider drawn as a stylised leaf vein. Sits between sections as
- * a quiet identity mark. Stroke colour follows variant; the asymmetric curl
- * keeps it from feeling like a generic horizontal rule.
+ * Organic SVG divider: a single stylised leaf glyph, centered. No
+ * horizontal hairlines on either side any more (they read as '--' clutter).
  */
 export function OrganicDivider({ className, variant = "light" }: Props) {
-  const stroke = variant === "dark" ? "#D8C9A3" : "#588157";
+  const fill = variant === "dark" ? "#D8C9A3" : "#588157";
   return (
     <div
       aria-hidden
@@ -20,34 +19,18 @@ export function OrganicDivider({ className, variant = "light" }: Props) {
         className
       )}
     >
-      <svg viewBox="0 0 480 36" className="w-full h-9" fill="none">
+      <svg viewBox="0 0 36 36" className="h-8 w-8 md:h-10 md:w-10" fill="none">
         <path
-          d="M2 18 H 210"
-          stroke={stroke}
-          strokeOpacity="0.45"
-          strokeWidth="1"
-          strokeLinecap="round"
+          d="M18 4 C9 8, 5 16, 8 28 C12 24, 17 21, 24 18 C17 23, 14 27, 15 30 C24 30, 30 22, 30 13 C30 8, 25 4, 18 4 Z"
+          fill={fill}
+          fillOpacity="0.85"
         />
-        <g transform="translate(220 8)">
-          <path
-            d="M20 4 C12 8, 8 14, 11 22 C14 18, 17 16, 23 14 C18 17, 16 21, 17 24 C24 24, 28 18, 28 11 C28 6, 24 4, 20 4 Z"
-            fill={stroke}
-            fillOpacity="0.85"
-          />
-          <path
-            d="M20 4 C18 11, 19 17, 22 23"
-            stroke="#1B2A20"
-            strokeOpacity="0.5"
-            strokeWidth="0.8"
-            fill="none"
-          />
-        </g>
         <path
-          d="M270 18 H 478"
-          stroke={stroke}
+          d="M18 4 C16 13, 18 22, 22 28"
+          stroke="#1B2A20"
           strokeOpacity="0.45"
-          strokeWidth="1"
-          strokeLinecap="round"
+          strokeWidth="0.9"
+          fill="none"
         />
       </svg>
     </div>
