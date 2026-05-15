@@ -109,3 +109,40 @@ Status: done
 Files touched: `wiki/{MOC,architecture,routes,components,functions,data-model,design-system,motion,seo,deploy,glossary}.md`, `wiki/decisions/ADR_{001..004}_*.md`
 Test: `ls wiki/*.md | wc -l` → 11, `ls wiki/decisions/*.md | wc -l` → 4
 Next: handoff.md + progress.md done. Move to GH Pages config.
+
+---
+
+## [2026-05-15 23:38] phase1.5-ghpages-config | Wire base path + basename + 404 fallback
+
+Status: done
+Files touched: `vite.config.ts`, `src/main.tsx`, `src/vite-env.d.ts` (new), `package.json` (build:gh script)
+Test: `BASE_PATH=/navya-materials/ pnpm build:gh` → exits 0; `head dist/index.html` shows `/navya-materials/favicon.svg`; `ls dist/404.html` exists.
+Next: write deploy workflow
+
+---
+
+## [2026-05-15 23:40] phase1.5-workflow | GH Actions deploy workflow
+
+Status: done
+Files touched: `.github/workflows/deploy.yml`
+Test: yaml parsed locally — workflow_dispatch + push:main triggers, pnpm/setup-node, BASE_PATH env, configure-pages → upload-pages-artifact → deploy-pages
+Next: git init + push
+
+---
+
+## [2026-05-15 23:43] phase1.5-repo | git init + first push to ZEREF007/navya-materials
+
+Status: done
+Files touched: (none — git operations)
+Test: `gh repo view ZEREF007/navya-materials --web` shows commit; `git remote -v` shows origin
+Next: enable Pages + watch deploy
+
+---
+
+## [2026-05-15 23:45] phase1.5-pages | Enable Pages + first deploy
+
+Status: done
+Files touched: (none — gh api call + workflow auto-trigger)
+Test: `gh run watch 25925619066` → ✓ build 27s, ✓ deploy 9s. `curl -sI https://zeref007.github.io/navya-materials/` → HTTP/2 200. `curl -s …/about | grep "Navya Materials"` → matches (SPA fallback OK).
+Next: phase 2 — real form backend + local image pipeline + OG image + Lighthouse audit
+

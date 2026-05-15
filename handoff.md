@@ -1,8 +1,8 @@
 # Handoff
 
 **Project:** Navya Materials marketing site — production-ready React/Vite frontend for Nepal-rooted sustainable materials company.
-**Last session end:** 2026-05-15 23:30 HKT
-**Last working state:** Phase 1 complete — full 8-route SPA live on `localhost:5173`, build verified, Obsidian vault scaffolded. GitHub upload + Pages deploy pending in next sub-step.
+**Last session end:** 2026-05-15 23:45 HKT
+**Last working state:** Phase 1 + Phase 1.5 complete — full 8-route SPA live on `localhost:5173` AND on **GitHub Pages: https://zeref007.github.io/navya-materials/**. Build verified (~150 KB gz). Obsidian vault scaffolded. Pages deploy via GitHub Actions, 27 s build + 9 s deploy.
 
 ---
 
@@ -24,8 +24,9 @@ Ship a production-ready brochure site for **Navya Engineering Solution** (Kathma
 | Production build (`dist/`) | ✅ verified | 2008 modules → 33 KB CSS + ~520 KB JS (~150 KB gz) |
 | Obsidian vault (`wiki/`) | ✅ scaffolded | 11 pages + 4 ADRs |
 | `handoff.md` + `progress.md` | ✅ in place | project root |
-| GitHub repo | ⏳ pending | `gh repo create` next sub-step |
-| GitHub Pages | ⏳ pending | depends on repo + Actions workflow |
+| GitHub repo | ✅ live | https://github.com/ZEREF007/navya-materials |
+| GitHub Pages | ✅ live | https://zeref007.github.io/navya-materials/ |
+| Deploy workflow (`.github/workflows/deploy.yml`) | ✅ green | run #25925619066 (36 s end-to-end) |
 | Contact form backend | ⚪ stub | `mailto:` only; Formspree/Web3Forms TBD |
 | OG image | ⚪ stub | `public/og-image.jpg` not yet created |
 | Logo SVG (final) | ⚪ stub | leaf-mark placeholder in `Logo.tsx` + `favicon.svg` |
@@ -147,6 +148,7 @@ Browser → /index.html
 | `pnpm build` first run | TS strict: `'Reveal' is declared but its value is never read.` in `PillarsStrip.tsx`. | Removed unused import. |
 | Tailwind `duration-[1200ms]` arbitrary | Warned: "ambiguous — could be transition-duration or animation-duration". | Switched to explicit `[transition-duration:1200ms]` arbitrary property. |
 | `preview_start navya-dev` from workspace `Navya Materials/.claude/launch.json` | Preview tool only reads workspace-root `.claude/launch.json`. | Wrote `launch.json` under the active workspace (`n8n resume editor/.claude/`) using `bash -c "cd … && pnpm dev"`. |
+| `pnpm build:gh` first run | TS: `Property 'env' does not exist on type 'ImportMeta'.` — `import.meta.env.BASE_URL` had no types. | Added `src/vite-env.d.ts` with `/// <reference types="vite/client" />`. |
 
 ---
 
@@ -158,15 +160,16 @@ Browser → /index.html
 2. Run `pnpm build && pnpm preview` — Lighthouse audit on http://localhost:4173/ (target perf ≥ 95).
 3. Walk through Obsidian vault — open `wiki/MOC.md` as start. Graph view should show wiki-link clusters.
 
-### Sub-step 2 (this thread)
+### Sub-step 2 (completed in this thread)
 
-1. Patch `vite.config.ts` to honour `BASE_PATH` env (default `/`, `/navya-materials/` in CI).
-2. Patch `src/main.tsx` `<BrowserRouter basename={import.meta.env.BASE_URL}>`.
-3. Add `package.json` scripts: `build:gh` + `postbuild:gh` (copy 404).
-4. Write `.github/workflows/deploy.yml` (Pages deployment via `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4`).
-5. `git init`, `git add`, commit, `gh repo create ZEREF007/navya-materials --public --source=. --push`.
-6. Enable Pages via `gh api` — source = workflow.
-7. Watch the run via `gh run watch`. Curl deployed URL.
+- ✅ `vite.config.ts` honours `BASE_PATH` env (default `/`, `/navya-materials/` in CI).
+- ✅ `src/main.tsx` `<BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>`.
+- ✅ `src/vite-env.d.ts` added with `vite/client` reference for `import.meta.env` types.
+- ✅ `package.json` script `build:gh` produces base-prefixed bundle + copies `dist/index.html` → `dist/404.html`.
+- ✅ `.github/workflows/deploy.yml` deploys on push to `main` (Pages artifact + `deploy-pages@v4`).
+- ✅ Repo: `ZEREF007/navya-materials` (public).
+- ✅ Pages source set to `workflow` via `gh api -X POST repos/.../pages`.
+- ✅ Verified: `curl -I https://zeref007.github.io/navya-materials/` → 200; `/about` HEAD 404 but body is app shell (SPA fallback working).
 
 ### Phase 2 priorities (when ready)
 
