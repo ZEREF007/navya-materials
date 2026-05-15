@@ -1,7 +1,6 @@
 import { Seo } from "@/lib/seo";
 import { Hero } from "@/components/sections/Hero";
 import { PillarsStrip } from "@/components/sections/PillarsStrip";
-import { MarqueeStrip } from "@/components/sections/MarqueeStrip";
 import { WhatWeDo } from "@/components/sections/WhatWeDo";
 import { FibersGrid } from "@/components/sections/FibersGrid";
 import { AboutStory } from "@/components/sections/AboutStory";
@@ -19,7 +18,6 @@ export default function Home() {
       />
       <Hero />
       <PillarsStrip />
-      <MarqueeStrip />
       <WhatWeDo />
       <FibersGrid preview />
       <AboutStory />
