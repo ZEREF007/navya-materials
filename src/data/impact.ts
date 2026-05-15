@@ -13,6 +13,7 @@ export type Story = {
   body: string;
   image: string;
   alt: string;
+  video?: string;
 };
 
 export const stories: Story[] = [

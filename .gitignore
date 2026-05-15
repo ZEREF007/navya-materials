@@ -9,3 +9,5 @@ dist
 .parcel-cache
 coverage
 *.tsbuildinfo
+wiki/.obsidian/
+wiki/Navya/
