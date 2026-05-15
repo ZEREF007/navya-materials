@@ -29,8 +29,8 @@ export const fibers: Fiber[] = [
     ],
     uses: ["Textiles", "Ropes & twine", "Specialty paper", "Composite boards"],
     image:
-      "https://images.unsplash.com/photo-1567361808960-dec9cb578182?auto=format&fit=crop&w=1600&q=80",
-    imageAlt: "Banana plantation with broad green leaves",
+      "https://images.unsplash.com/photo-1653481006616-aab561a77a3b?auto=format&fit=crop&w=1600&q=80",
+    imageAlt: "Banana plantation seen through broad green leaves",
     accent: "from-forest-700/70",
   },
   {
@@ -49,8 +49,8 @@ export const fibers: Fiber[] = [
     ],
     uses: ["Apparel & textiles", "Construction composites", "Bio-plastics", "Cordage"],
     image:
-      "https://images.unsplash.com/photo-1536514072410-5019a3c69182?auto=format&fit=crop&w=1600&q=80",
-    imageAlt: "Hemp plants growing in a field",
+      "https://images.unsplash.com/photo-1532765488483-62ff440ee4fd?auto=format&fit=crop&w=1600&q=80",
+    imageAlt: "Green hemp plants growing in daylight",
     accent: "from-forest-800/70",
   },
   {
@@ -69,8 +69,8 @@ export const fibers: Fiber[] = [
     ],
     uses: ["Heritage textiles", "Handicrafts", "Ropes & sacking", "Mixed-fiber yarns"],
     image:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80",
-    imageAlt: "Himalayan mountain village landscape",
+      "https://images.unsplash.com/photo-1681635851078-57a587a6c2d8?auto=format&fit=crop&w=1600&q=80",
+    imageAlt: "Snow-capped Himalayan mountain range",
     accent: "from-forest-700/65",
   },
 ];

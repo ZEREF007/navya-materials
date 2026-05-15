@@ -20,8 +20,8 @@ export default function NaturalFibers() {
           </>
         }
         lede="Each plant brings its own properties, its own communities, and its own place in a sustainable material future."
-        image="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=2400&q=80"
-        imageAlt="Layered natural fibers"
+        image="https://images.unsplash.com/photo-1646750421466-a04e689254d4?auto=format&fit=crop&w=2400&q=80"
+        imageAlt="Close-up of natural fiber threads on a loom"
       />
       <FiberDeepDive />
       <CTASection

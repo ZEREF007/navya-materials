@@ -20,8 +20,8 @@ export default function Research() {
           </>
         }
         lede="Our research bridges lab and field — characterising indigenous fibers, engineering low-energy processing, and measuring the full lifecycle of what we make."
-        image="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2400&q=80"
-        imageAlt="Engineering and laboratory workspace"
+        image="https://images.unsplash.com/photo-1707978932202-751b08324daf?auto=format&fit=crop&w=2400&q=80"
+        imageAlt="Vintage textile machinery close-up"
         meta={[
           { label: "Disciplines", value: "4" },
           { label: "Method", value: "Iterative" },

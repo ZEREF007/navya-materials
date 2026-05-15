@@ -14,8 +14,8 @@ export const products: Product[] = [
     status: "Pilot",
     body: "A naturally lustrous, biodegradable fabric spun from banana pseudo-stem fiber. Suited to apparel, home goods, and craft accessories.",
     image:
-      "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=1200&q=80",
-    alt: "Banana fiber textile",
+      "https://images.unsplash.com/photo-1569909115134-a0426936c879?auto=format&fit=crop&w=1200&q=80",
+    alt: "Stack of natural-colour textiles",
   },
   {
     name: "Hemp Composite Board",

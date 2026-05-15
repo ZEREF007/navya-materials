@@ -22,8 +22,8 @@ export default function About() {
           </>
         }
         lede="We turn under-utilised natural resources into engineered, sustainable materials — built in partnership with the communities that grow and gather them."
-        image="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2400&q=80"
-        imageAlt="Himalayan terraced fields"
+        image="https://images.unsplash.com/photo-1681635851078-57a587a6c2d8?auto=format&fit=crop&w=2400&q=80"
+        imageAlt="Snow-capped Himalayan mountain range over Nepal"
         meta={[
           { label: "Founded", value: "2023" },
           { label: "Base", value: "Kathmandu" },

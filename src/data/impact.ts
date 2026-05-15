@@ -21,8 +21,8 @@ export const stories: Story[] = [
     location: "Banana belt, Lowland Nepal",
     body: "Working with smallholder banana farmers to extract fiber from pseudo-stems left in the field — turning agricultural waste into a second source of income, while keeping soil organic matter intact.",
     image:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80",
-    alt: "Smallholder farm in Nepal",
+      "https://images.unsplash.com/photo-1633410195091-bd66114cef5f?auto=format&fit=crop&w=1600&q=80",
+    alt: "Smallholder farmers working in a field",
   },
   {
     title: "Women-led fabrication",
@@ -37,7 +37,7 @@ export const stories: Story[] = [
     location: "Himalayan foothills",
     body: "Traditional allo (Himalayan nettle) processing is intergenerational knowledge. We work alongside communities to preserve hand methods while introducing fairer trade routes to designers and brands.",
     image:
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1600&q=80",
-    alt: "Himalayan landscape and traditional craft",
+      "https://images.unsplash.com/photo-1731044900377-93da03bf0675?auto=format&fit=crop&w=1600&q=80",
+    alt: "Prayer flags on a Himalayan mountainside",
   },
 ];

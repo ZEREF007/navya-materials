@@ -12,16 +12,16 @@ export const services: Service[] = [
     title: "Natural Fiber Research",
     body: "Studying, extracting, and developing high-performance fibers from local plants.",
     image:
-      "https://images.unsplash.com/photo-1611735341450-74d61e660ad2?auto=format&fit=crop&w=1200&q=80",
-    alt: "Close-up of natural fiber strands",
+      "https://images.unsplash.com/photo-1646750421466-a04e689254d4?auto=format&fit=crop&w=1200&q=80",
+    alt: "Close-up of woven natural fiber threads",
   },
   {
     number: "02",
     title: "Textile Innovation",
     body: "From fiber to yarn to fabric — creating sustainable textile alternatives.",
     image:
-      "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=1200&q=80",
-    alt: "Spools of natural yarn",
+      "https://images.unsplash.com/photo-1643766883805-829d9ad95c42?auto=format&fit=crop&w=1200&q=80",
+    alt: "Colorful weaving loom at work",
   },
   {
     number: "03",
@@ -36,15 +36,15 @@ export const services: Service[] = [
     title: "Technology & Machinery",
     body: "Designing and building machines for rural fiber processing and production.",
     image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80",
-    alt: "Engineering workshop",
+      "https://images.unsplash.com/photo-1707978932202-751b08324daf?auto=format&fit=crop&w=1200&q=80",
+    alt: "Vintage weaving machinery close-up",
   },
   {
     number: "05",
     title: "Applied Engineering",
     body: "Engineering solutions that improve lives in rural and industrial contexts.",
     image:
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
-    alt: "Engineering applied to community work",
+      "https://images.unsplash.com/photo-1623220940666-f4bcc07aaed9?auto=format&fit=crop&w=1200&q=80",
+    alt: "Engineer working on mechanical equipment",
   },
 ];

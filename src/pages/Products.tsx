@@ -20,8 +20,8 @@ export default function Products() {
           </>
         }
         lede="A working catalogue of what we make today and what we&apos;re refining for tomorrow. Brand partners and product designers welcome at any stage."
-        image="https://images.unsplash.com/photo-1488747279002-c8523379faaa?auto=format&fit=crop&w=2400&q=80"
-        imageAlt="Hand-spun natural fiber yarn"
+        image="https://images.unsplash.com/photo-1569909115134-a0426936c879?auto=format&fit=crop&w=2400&q=80"
+        imageAlt="Stack of natural-colour textiles"
         meta={[
           { label: "Categories", value: "4" },
           { label: "Pilot", value: "2" },
