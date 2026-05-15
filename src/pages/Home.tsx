@@ -3,7 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { LifecycleStrip } from "@/components/sections/LifecycleStrip";
 import { WhatWeDo } from "@/components/sections/WhatWeDo";
 import { FeaturedHighlight } from "@/components/sections/FeaturedHighlight";
-import { FibersGrid } from "@/components/sections/FibersGrid";
+import { MaterialsAtlas } from "@/components/sections/MaterialsAtlas";
 import { PullQuote } from "@/components/sections/PullQuote";
 import { OpenNotes } from "@/components/sections/OpenNotes";
 import { StatsStrip } from "@/components/sections/StatsStrip";
@@ -20,7 +20,7 @@ export default function Home() {
       <LifecycleStrip />
       <WhatWeDo />
       <FeaturedHighlight />
-      <FibersGrid preview />
+      <MaterialsAtlas />
       <PullQuote
         quote="The materials of the next century already exist. They are in the fields, the forests, and the hands of the people who have always worked with them."
         attribution="Roshan Ojha, Founder"
