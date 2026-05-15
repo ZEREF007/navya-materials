@@ -27,8 +27,8 @@ export function Hero() {
         className="absolute inset-0 will-change-transform"
       >
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=2400&q=80"
-          alt="Sunlight through a forest of broad green leaves"
+          src="https://images.unsplash.com/photo-1653481006616-aab561a77a3b?auto=format&fit=crop&w=2400&q=80"
+          alt="Banana plantation — source of natural pseudo-stem fiber"
           className="h-full w-full object-cover"
           loading="eager"
           fetchPriority="high"

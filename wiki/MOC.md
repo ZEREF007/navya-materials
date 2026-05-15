@@ -31,6 +31,10 @@ See: [[handoff|project-root handoff.md]] · [[progress|progress.md]] (root)
 | SEO / meta / sitemap | [[seo]] |
 | Deploy strategy | [[deploy]] |
 | Glossary | [[glossary]] |
+| **Media index** (images / videos / stories ↔ code) | [[media]] |
+| **Future videos** (paths to add real video) | [[future-videos]] |
+| **How to open this vault** | [[HOW-TO-OPEN]] |
+| **Asset stubs** | [[assets/README\|wiki/assets/]] |
 
 ## Decisions (ADR)
 

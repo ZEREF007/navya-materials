@@ -9,5 +9,6 @@ dist
 .parcel-cache
 coverage
 *.tsbuildinfo
-wiki/.obsidian/
 wiki/Navya/
+wiki/.obsidian/workspace.json
+wiki/.obsidian/workspace-mobile.json
