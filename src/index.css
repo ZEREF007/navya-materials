@@ -96,7 +96,7 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-sm md:text-base font-semibold uppercase tracking-[0.16em] text-primary;
+    @apply inline-flex items-center gap-2 text-base md:text-lg font-semibold uppercase tracking-[0.18em] text-primary;
   }
 
   .section {

@@ -4,15 +4,15 @@ import { ImageWithFallback } from "@/components/common/ImageWithFallback";
 
 export function AboutStory({ compact = false }: { compact?: boolean }) {
   return (
-    <section className={compact ? "py-24" : "section"}>
+    <section className={compact ? "py-16" : "py-14 md:py-20 lg:py-24"}>
       <Container>
-        <div className="grid gap-12 md:grid-cols-12 md:gap-16">
-          <Reveal className="md:col-span-5 lg:col-span-4">
+        <div className="grid gap-10 md:grid-cols-12 md:gap-12 lg:gap-16 items-start">
+          <Reveal className="md:col-span-5 lg:col-span-5">
             <span className="eyebrow">Our story</span>
-            <h2 className="display mt-5 text-balance text-4xl md:text-5xl font-medium leading-[1.05]">
+            <h2 className="display mt-4 text-balance text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.05]">
               Waste seen as <span className="italic font-light">possibility.</span>
             </h2>
-            <div className="relative mt-8 aspect-[4/5] overflow-hidden rounded-3xl bg-forest-100">
+            <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-3xl bg-forest-100">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1653481006616-aab561a77a3b?auto=format&fit=crop&w=1600&q=90"
                 alt="Banana plantation, the source of natural pseudo-stem fiber"
@@ -29,7 +29,7 @@ export function AboutStory({ compact = false }: { compact?: boolean }) {
               </div>
             </div>
           </Reveal>
-          <Reveal delay={0.1} className="md:col-span-7 lg:col-span-7 lg:col-start-6 space-y-6 text-pretty text-base md:text-lg leading-relaxed text-foreground/80">
+          <Reveal delay={0.1} className="md:col-span-7 lg:col-span-7 space-y-6 text-pretty text-base md:text-lg leading-relaxed text-foreground/80">
             <p>
               We are <strong className="font-medium text-foreground">Navya Engineering Solution</strong>.
               The company was founded in 2023 by mechanical engineer <em>Roshan Ojha</em> and team,
