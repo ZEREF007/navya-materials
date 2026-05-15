@@ -106,21 +106,6 @@ export function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: reduce ? 0 : 1.2, duration: 0.8 }}
-          className="mt-16 hidden items-center gap-6 text-[11px] uppercase tracking-eyebrow text-sand-200/75 md:flex"
-        >
-          <span className="font-mono">01 / Hero</span>
-          <span className="h-px flex-1 max-w-32 bg-sand-100/30" />
-          <motion.span
-            animate={reduce ? {} : { y: [0, 4, 0] }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-          >
-            Scroll to explore ↓
-          </motion.span>
-        </motion.div>
       </Container>
     </section>
   );
