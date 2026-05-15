@@ -32,11 +32,11 @@ export function Logo({ className, mono = false }: { className?: string; mono?: b
       <span className="flex flex-col leading-tight">
         <span
           className={cn(
-            "font-display font-medium text-[1.05rem] tracking-tightish",
+            "font-display font-semibold uppercase text-[1.05rem] tracking-[0.12em]",
             mono ? "text-background" : "text-foreground"
           )}
         >
-          Navya
+          NAVYA
         </span>
         <span
           className={cn(
