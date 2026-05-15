@@ -1,5 +1,6 @@
 import { Container } from "@/components/common/Container";
 import { Reveal } from "@/components/common/Reveal";
+import { ImageWithFallback } from "@/components/common/ImageWithFallback";
 import { Quote } from "lucide-react";
 
 export function FounderCard() {
@@ -9,12 +10,10 @@ export function FounderCard() {
         <div className="grid items-center gap-12 md:grid-cols-12 lg:gap-16">
           <Reveal className="md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-forest-100">
-              <img
+              <ImageWithFallback
                 src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80"
                 alt="Roshan Ojha, founder of Navya Engineering Solution"
                 className="h-full w-full object-cover"
-                loading="lazy"
-                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-900/40 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 text-sand-50">

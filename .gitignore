@@ -8,3 +8,4 @@ dist
 .vite
 .parcel-cache
 coverage
+*.tsbuildinfo

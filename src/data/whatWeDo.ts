@@ -12,7 +12,7 @@ export const services: Service[] = [
     title: "Natural Fiber Research",
     body: "Studying, extracting, and developing high-performance fibers from local plants.",
     image:
-      "https://images.unsplash.com/photo-1597266582625-219fd6b00bf3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1611735341450-74d61e660ad2?auto=format&fit=crop&w=1200&q=80",
     alt: "Close-up of natural fiber strands",
   },
   {

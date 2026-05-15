@@ -1,5 +1,6 @@
 import { Container } from "@/components/common/Container";
 import { Reveal } from "@/components/common/Reveal";
+import { ImageWithFallback } from "@/components/common/ImageWithFallback";
 import { impactStats, stories } from "@/data/impact";
 
 export function ImpactStats() {
@@ -49,11 +50,10 @@ export function ImpactStats() {
                 >
                   <div className="md:col-span-7">
                     <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-                      <img
+                      <ImageWithFallback
                         src={s.image}
                         alt={s.alt}
-                        className="h-full w-full object-cover"
-                        loading="lazy"
+                        className="absolute inset-0 h-full w-full object-cover"
                       />
                     </div>
                   </div>

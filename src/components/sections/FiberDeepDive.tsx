@@ -1,5 +1,6 @@
 import { Container } from "@/components/common/Container";
 import { Reveal } from "@/components/common/Reveal";
+import { ImageWithFallback } from "@/components/common/ImageWithFallback";
 import { fibers } from "@/data/fibers";
 
 export function FiberDeepDive() {
@@ -18,16 +19,15 @@ export function FiberDeepDive() {
               >
                 <div className="md:col-span-6 lg:col-span-7">
                   <div className="relative aspect-[4/5] md:aspect-[5/6] overflow-hidden rounded-3xl bg-forest-100">
-                    <img
+                    <ImageWithFallback
                       src={f.image}
                       alt={f.imageAlt}
-                      className="h-full w-full object-cover"
-                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover"
                     />
                     <div
                       className={`absolute inset-0 bg-gradient-to-t ${f.accent} via-forest-900/15 to-transparent`}
                     />
-                    <div className="absolute bottom-6 left-6 right-6 text-sand-50">
+                    <div className="absolute bottom-6 left-6 right-6 text-sand-50 z-10">
                       <p className="font-mono text-[10px] uppercase tracking-eyebrow text-sand-200/80">
                         {String(i + 1).padStart(2, "0")} · {f.origin}
                       </p>

@@ -29,7 +29,7 @@ export const fibers: Fiber[] = [
     ],
     uses: ["Textiles", "Ropes & twine", "Specialty paper", "Composite boards"],
     image:
-      "https://images.unsplash.com/photo-1591005622089-c19a35b6efdc?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1567361808960-dec9cb578182?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Banana plantation with broad green leaves",
     accent: "from-forest-700/70",
   },

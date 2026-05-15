@@ -40,10 +40,23 @@
   }
 
   html {
-    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
   }
 
   body {
@@ -62,11 +75,31 @@
     font-feature-settings: "ss01", "ss02";
   }
 
-  /* Fraunces optical tuning */
   .display {
     font-family: "Fraunces", Georgia, serif;
     font-optical-sizing: auto;
     font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 0;
+  }
+
+  /* Custom cursor — hide native on pointer:fine devices */
+  body.custom-cursor-on,
+  body.custom-cursor-on * {
+    cursor: none !important;
+  }
+  /* But keep text input cursor */
+  body.custom-cursor-on input,
+  body.custom-cursor-on textarea {
+    cursor: text !important;
+  }
+  /* Fallback custom cursor for users that hover the iframe edge: tiny dot */
+  @media (pointer: fine) {
+    html {
+      cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><circle cx='10' cy='10' r='3' fill='%23344E41'/></svg>") 10 10, auto;
+    }
+  }
+
+  img, video {
+    @apply max-w-full h-auto;
   }
 }
 
@@ -86,22 +119,13 @@
 
   .section {
     @apply py-20 md:py-28 lg:py-32;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 800px;
   }
 
-  .grain-overlay {
-    position: relative;
-    isolation: isolate;
-  }
-
-  .grain-overlay::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background-image: var(--tw-bg-image, none);
-    mix-blend-mode: multiply;
-    opacity: 0.18;
-    z-index: 1;
+  /* Disable content-visibility on the hero so above-the-fold paints immediately */
+  .hero-section {
+    content-visibility: visible;
   }
 
   .underline-grow {

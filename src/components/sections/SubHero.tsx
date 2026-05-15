@@ -1,5 +1,6 @@
 import { Container } from "@/components/common/Container";
 import { Reveal } from "@/components/common/Reveal";
+import { ImageWithFallback } from "@/components/common/ImageWithFallback";
 import type { ReactNode } from "react";
 
 type Props = {
@@ -16,12 +17,11 @@ export function SubHero({ eyebrow, title, lede, image, imageAlt, meta }: Props) 
     <section className="relative isolate overflow-hidden border-b border-foreground/10 bg-sand-50">
       {image ? (
         <div className="absolute inset-0 -z-10">
-          <img
+          <ImageWithFallback
             src={image}
             alt={imageAlt || ""}
             className="h-full w-full object-cover opacity-40"
             loading="eager"
-            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-sand-50/40 via-sand-50/70 to-background" />
         </div>

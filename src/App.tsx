@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
-import { ScrollToTop } from "@/components/layout/ScrollToTop";
 
 const Home = lazy(() => import("@/pages/Home"));
 const About = lazy(() => import("@/pages/About"));
@@ -24,23 +24,39 @@ function RouteFallback() {
   );
 }
 
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={location.pathname}
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -8 }}
+        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <Suspense fallback={<RouteFallback />}>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/natural-fibers" element={<NaturalFibers />} />
+            <Route path="/research" element={<Research />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/collaborate" element={<Collaborate />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
 export default function App() {
   return (
     <Layout>
-      <ScrollToTop />
-      <Suspense fallback={<RouteFallback />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/natural-fibers" element={<NaturalFibers />} />
-          <Route path="/research" element={<Research />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/collaborate" element={<Collaborate />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+      <AnimatedRoutes />
     </Layout>
   );
 }

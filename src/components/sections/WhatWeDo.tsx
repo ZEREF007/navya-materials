@@ -1,6 +1,7 @@
 import { Container } from "@/components/common/Container";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/common/Reveal";
+import { ImageWithFallback } from "@/components/common/ImageWithFallback";
 import { services } from "@/data/whatWeDo";
 
 export function WhatWeDo() {
@@ -28,20 +29,18 @@ export function WhatWeDo() {
             <StaggerItem
               key={s.title}
               className={
-                "group relative overflow-hidden rounded-3xl bg-card border border-foreground/5 transition-all hover:border-foreground/10 hover:shadow-xl " +
+                "group relative overflow-hidden rounded-3xl bg-card border border-foreground/5 transition-all duration-500 hover:border-foreground/10 hover:shadow-xl hover:-translate-y-1 " +
                 (i === 0 ? "lg:row-span-2 lg:col-span-1" : "")
               }
             >
               <div className={"relative " + (i === 0 ? "aspect-[3/4] lg:aspect-auto lg:h-full" : "aspect-[4/3]")}>
-                <img
+                <ImageWithFallback
                   src={s.image}
                   alt={s.alt}
                   className="absolute inset-0 h-full w-full object-cover transition-transform [transition-duration:1200ms] ease-out group-hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-900/85 via-forest-900/30 to-transparent" />
-                <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-8 text-sand-50">
+                <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-8 text-sand-50 z-10">
                   <span className="font-mono text-xs tracking-wider text-sand-200/80">
                     {s.number}
                   </span>

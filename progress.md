@@ -146,3 +146,31 @@ Files touched: (none — gh api call + workflow auto-trigger)
 Test: `gh run watch 25925619066` → ✓ build 27s, ✓ deploy 9s. `curl -sI https://zeref007.github.io/navya-materials/` → HTTP/2 200. `curl -s …/about | grep "Navya Materials"` → matches (SPA fallback OK).
 Next: phase 2 — real form backend + local image pipeline + OG image + Lighthouse audit
 
+
+---
+
+## [2026-05-15 23:52] phase1.6-images | Replace 4 dead Unsplash URLs + add ImageWithFallback
+
+Status: done
+Files touched: `src/components/common/ImageWithFallback.tsx` (new), `src/data/{fibers,whatWeDo,products,impact}.ts`, `src/pages/Products.tsx`, `src/components/sections/{Hero,FibersGrid,WhatWeDo,ProductsGrid,FiberDeepDive,ImpactStats,SubHero,FounderCard}.tsx`
+Test: `curl -sI https://images.unsplash.com/photo-1567361808960-dec9cb578182?w=400` → 200; preview screenshot shows all 5 WhatWeDo cards loaded
+Next: smooth scroll + cursor + scroll progress
+
+---
+
+## [2026-05-15 23:55] phase1.6-smooth-cursor | Lenis + Cursor + ScrollProgress + page transition
+
+Status: done
+Files touched: `package.json` (+lenis), `src/components/common/{SmoothScroll,ScrollProgress,Cursor}.tsx` (new), `src/components/layout/Layout.tsx`, `src/App.tsx` (AnimatePresence wrap)
+Test: dev preview shows progress bar, hero parallax on scroll, page-fade on route change
+Next: optimize CSS — grain opacity, kenburns, content-visibility
+
+---
+
+## [2026-05-15 23:57] phase1.6-css-perf | index.css overhaul (content-visibility + cursor + reduced grain)
+
+Status: done
+Files touched: `src/index.css`, `src/components/sections/Hero.tsx` (hero-section class)
+Test: `pnpm build` → ✓ 2012 modules in 1.81s. CSS 36.91 KB (gz 7.47).
+Next: commit + push
+

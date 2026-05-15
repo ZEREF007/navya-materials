@@ -1,8 +1,8 @@
 # Handoff
 
 **Project:** Navya Materials marketing site — production-ready React/Vite frontend for Nepal-rooted sustainable materials company.
-**Last session end:** 2026-05-15 23:45 HKT
-**Last working state:** Phase 1 + Phase 1.5 complete — full 8-route SPA live on `localhost:5173` AND on **GitHub Pages: https://zeref007.github.io/navya-materials/**. Build verified (~150 KB gz). Obsidian vault scaffolded. Pages deploy via GitHub Actions, 27 s build + 9 s deploy.
+**Last session end:** 2026-05-15 23:58 HKT
+**Last working state:** Phase 1 + 1.5 + **Phase 1.6 (perf + polish)** complete — broken Unsplash URLs replaced, ImageWithFallback fallback layer added, Lenis smooth scroll, ScrollProgress bar, custom cursor (dot + ring, mix-blend-difference), hero parallax via scroll-progress, page-transition fade via AnimatePresence, content-visibility on sections. Build verified (~180 KB gz). Site live on `localhost:5173` + GitHub Pages.
 
 ---
 

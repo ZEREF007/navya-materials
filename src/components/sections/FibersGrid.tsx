@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/common/Container";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/common/Reveal";
+import { ImageWithFallback } from "@/components/common/ImageWithFallback";
 import { fibers } from "@/data/fibers";
 
 export function FibersGrid({ preview = false }: { preview?: boolean }) {
@@ -38,15 +39,13 @@ export function FibersGrid({ preview = false }: { preview?: boolean }) {
           {items.map((f) => (
             <StaggerItem key={f.slug} className="group">
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-forest-900">
-                <img
+                <ImageWithFallback
                   src={f.image}
                   alt={f.imageAlt}
-                  className="h-full w-full object-cover transition-transform [transition-duration:1500ms] ease-out group-hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform [transition-duration:1500ms] ease-out group-hover:scale-105"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t ${f.accent} via-forest-900/20 to-transparent`} />
-                <div className="absolute top-5 left-5 right-5 flex items-center justify-between text-sand-50">
+                <div className="absolute top-5 left-5 right-5 flex items-center justify-between text-sand-50 z-10">
                   <span className="font-mono text-xs uppercase tracking-eyebrow text-sand-200/85">
                     {f.origin}
                   </span>
@@ -56,7 +55,7 @@ export function FibersGrid({ preview = false }: { preview?: boolean }) {
                     </span>
                   ) : null}
                 </div>
-                <div className="absolute bottom-5 left-5 right-5 text-sand-50">
+                <div className="absolute bottom-5 left-5 right-5 text-sand-50 z-10">
                   <p className="font-display text-2xl md:text-3xl font-medium leading-tight">
                     {f.name}
                   </p>

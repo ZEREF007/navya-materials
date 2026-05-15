@@ -1,5 +1,6 @@
 import { Container } from "@/components/common/Container";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/common/Reveal";
+import { ImageWithFallback } from "@/components/common/ImageWithFallback";
 import { products } from "@/data/products";
 
 const statusStyles: Record<string, string> = {
@@ -24,16 +25,14 @@ export function ProductsGrid() {
           {products.map((p) => (
             <StaggerItem key={p.name} className="group flex flex-col">
               <div className="relative aspect-[5/6] overflow-hidden rounded-3xl bg-sand-100">
-                <img
+                <ImageWithFallback
                   src={p.image}
                   alt={p.alt}
-                  className="h-full w-full object-cover transition-transform [transition-duration:1200ms] ease-out group-hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform [transition-duration:1200ms] ease-out group-hover:scale-105"
                 />
                 <span
                   className={
-                    "absolute top-4 right-4 rounded-full px-3 py-1 text-[10px] font-medium uppercase tracking-eyebrow " +
+                    "absolute top-4 right-4 z-10 rounded-full px-3 py-1 text-[10px] font-medium uppercase tracking-eyebrow " +
                     (statusStyles[p.status] ?? "")
                   }
                 >

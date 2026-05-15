@@ -29,7 +29,7 @@ export const stories: Story[] = [
     location: "Mid-hills, Nepal",
     body: "Local women's groups operate decortication and spinning at village-scale workshops. Skill training and shared equipment unlock decentralized production without leaving home.",
     image:
-      "https://images.unsplash.com/photo-1591895960996-1ebbf3a9d999?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1488747279002-c8523379faaa?auto=format&fit=crop&w=1600&q=80",
     alt: "Hand-spun fiber in a workshop",
   },
   {

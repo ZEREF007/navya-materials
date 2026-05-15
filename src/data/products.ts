@@ -32,7 +32,7 @@ export const products: Product[] = [
     status: "Pilot",
     body: "Hand-processed Himalayan nettle yarn in heritage counts — for designers building traceable collections.",
     image:
-      "https://images.unsplash.com/photo-1591895960996-1ebbf3a9d999?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1488747279002-c8523379faaa?auto=format&fit=crop&w=1200&q=80",
     alt: "Hand-spun heritage yarn",
   },
   {
@@ -59,7 +59,7 @@ export const products: Product[] = [
     status: "Prototype",
     body: "Blended hemp + allo cordage for industrial and agricultural use — strong, biodegradable, locally produced.",
     image:
-      "https://images.unsplash.com/photo-1574515559906-d8d65f5e7c4d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535970793482-07de93762dc4?auto=format&fit=crop&w=1200&q=80",
     alt: "Natural rope and cordage",
   },
 ];
