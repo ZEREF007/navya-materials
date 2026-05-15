@@ -1,31 +1,16 @@
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Leaf } from "lucide-react";
-import { useRef } from "react";
 import { Container } from "@/components/common/Container";
 import { ImageWithFallback } from "@/components/common/ImageWithFallback";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
   const reduce = useReducedMotion();
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", reduce ? "0%" : "18%"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, reduce ? 1 : 1.08]);
-  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
 
   return (
-    <section
-      ref={ref}
-      className="hero-section relative isolate min-h-[92vh] w-full overflow-hidden bg-forest-900 text-sand-50"
-    >
-      <motion.div
-        style={{ y, scale }}
-        className="absolute inset-0 will-change-transform"
-      >
+    <section className="hero-section relative isolate min-h-[92vh] w-full overflow-hidden bg-forest-900 text-sand-50">
+      <div className="absolute inset-0">
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1653481006616-aab561a77a3b?auto=format&fit=crop&w=2880&q=90"
           alt="Banana plantation, the source of natural pseudo-stem fiber"
@@ -33,11 +18,8 @@ export function Hero() {
           loading="eager"
           fetchPriority="high"
         />
-      </motion.div>
-      <motion.div
-        style={{ opacity: overlayOpacity }}
-        className="absolute inset-0 bg-gradient-to-tr from-forest-900/85 via-forest-900/55 to-transparent"
-      />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-forest-900/85 via-forest-900/55 to-transparent" />
       <div className="absolute inset-0 bg-grain opacity-[0.12] pointer-events-none" />
 
       <Container className="relative z-10 flex min-h-[92vh] flex-col justify-end pb-20 pt-32 md:pb-24 lg:pb-28">
@@ -105,8 +87,8 @@ export function Hero() {
             </Button>
           </motion.div>
         </motion.div>
-
       </Container>
+      {reduce ? null : null}
     </section>
   );
 }
