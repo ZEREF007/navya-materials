@@ -14,7 +14,7 @@ export const products: Product[] = [
     status: "Pilot",
     body: "A naturally lustrous, biodegradable fabric spun from banana pseudo-stem fiber. Suited to apparel, home goods, and craft accessories.",
     image:
-      "https://images.unsplash.com/photo-1569909115134-a0426936c879?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1569909115134-a0426936c879?auto=format&fit=crop&w=2000&q=90",
     alt: "Stack of natural-colour textiles",
   },
   {
@@ -23,7 +23,7 @@ export const products: Product[] = [
     status: "Prototype",
     body: "Low-carbon hemp-bonded panel for interior partitions, insulation, and modular furniture.",
     image:
-      "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=2000&q=90",
     alt: "Hemp composite board sample",
   },
   {
@@ -32,7 +32,7 @@ export const products: Product[] = [
     status: "Pilot",
     body: "Hand-processed Himalayan nettle yarn in heritage counts — for designers building traceable collections.",
     image:
-      "https://images.unsplash.com/photo-1488747279002-c8523379faaa?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1488747279002-c8523379faaa?auto=format&fit=crop&w=2000&q=90",
     alt: "Hand-spun heritage yarn",
   },
   {
@@ -41,7 +41,7 @@ export const products: Product[] = [
     status: "In R&D",
     body: "Compact, manually-operable fiber extraction unit designed for rural workshops without grid power.",
     image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2000&q=90",
     alt: "Compact fiber processing machine",
   },
   {
@@ -50,7 +50,7 @@ export const products: Product[] = [
     status: "In R&D",
     body: "Mixed-fiber tiles for low-impact flooring and wall finishes. Compostable at end of life.",
     image:
-      "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=2000&q=90",
     alt: "Bio-composite material tiles",
   },
   {
@@ -59,7 +59,7 @@ export const products: Product[] = [
     status: "Prototype",
     body: "Blended hemp + allo cordage for industrial and agricultural use — strong, biodegradable, locally produced.",
     image:
-      "https://images.unsplash.com/photo-1535970793482-07de93762dc4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535970793482-07de93762dc4?auto=format&fit=crop&w=2000&q=90",
     alt: "Natural rope and cordage",
   },
 ];

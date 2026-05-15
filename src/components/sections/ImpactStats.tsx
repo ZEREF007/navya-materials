@@ -1,7 +1,6 @@
 import { Container } from "@/components/common/Container";
 import { Reveal } from "@/components/common/Reveal";
 import { ImageWithFallback } from "@/components/common/ImageWithFallback";
-import { YouTubeEmbed } from "@/components/common/YouTubeEmbed";
 import { impactStats, stories } from "@/data/impact";
 
 export function ImpactStats() {
@@ -51,16 +50,11 @@ export function ImpactStats() {
                 >
                   <div className="md:col-span-7">
                     <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-forest-900">
-                      {s.youtubeId ? (
-                        <YouTubeEmbed videoId={s.youtubeId} poster={s.image} />
-                      ) : (
-                        <ImageWithFallback
-                          src={s.image}
-                          alt={s.alt}
-                          className="absolute inset-0 h-full w-full object-cover"
-                        />
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-forest-900/40 via-transparent to-transparent pointer-events-none z-[1]" />
+                      <ImageWithFallback
+                        src={s.image}
+                        alt={s.alt}
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
                     </div>
                   </div>
                   <div className="md:col-span-5">

@@ -22,7 +22,7 @@ export default function About() {
           </>
         }
         lede="We turn under-utilised natural resources into engineered, sustainable materials — built in partnership with the communities that grow and gather them."
-        image="https://images.unsplash.com/photo-1681635851078-57a587a6c2d8?auto=format&fit=crop&w=2400&q=80"
+        image="https://images.unsplash.com/photo-1681635851078-57a587a6c2d8?auto=format&fit=crop&w=2880&q=90"
         imageAlt="Snow-capped Himalayan mountain range over Nepal"
         meta={[
           { label: "Founded", value: "2023" },

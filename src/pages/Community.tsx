@@ -20,7 +20,7 @@ export default function Community() {
           </>
         }
         lede="Our work is built on relationships with farmers, women-led groups, and rural fabricators — distributed production, shared value, and skill exchange in both directions."
-        image="https://images.unsplash.com/photo-1633410195091-bd66114cef5f?auto=format&fit=crop&w=2400&q=80"
+        image="https://images.unsplash.com/photo-1633410195091-bd66114cef5f?auto=format&fit=crop&w=2880&q=90"
         imageAlt="Group of farmers working in a field"
         meta={[
           { label: "Farmers engaged", value: "100+" },

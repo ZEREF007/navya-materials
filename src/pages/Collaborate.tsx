@@ -22,7 +22,7 @@ export default function Collaborate() {
           </>
         }
         lede="We partner with researchers, industries, designers, organisations, and communities who share our vision for sustainable material innovation."
-        image="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=2400&q=80"
+        image="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=2880&q=90"
         imageAlt="Collaborative workshop"
       />
       <CollaborateAreas />

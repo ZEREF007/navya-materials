@@ -4,6 +4,17 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 const INTERACTIVE_SELECTOR =
   "a, button, [role=button], input, textarea, label, summary, .cursor-pointer";
 
+/**
+ * Branded leaf cursor.
+ *
+ * - Sage-green leaf (matches the Navya leaf-mark logo) with a deep-forest
+ *   midrib and a sand outline halo — visible on light cream pages, dark hero
+ *   sections, and photography alike.
+ * - Rotates to follow cursor direction so it always feels rooted to motion.
+ * - Soft drifting wobble at rest, scale-up on hover, scale-down on click.
+ * - Companion small dot follows on a slower spring for a tactile trail.
+ * - Disabled on coarse pointers + reduced-motion.
+ */
 export function Cursor() {
   const [enabled, setEnabled] = useState(false);
   const [hovering, setHovering] = useState(false);
@@ -11,10 +22,16 @@ export function Cursor() {
 
   const x = useMotionValue(-200);
   const y = useMotionValue(-200);
-  const angle = useMotionValue(0);
-  const sx = useSpring(x, { stiffness: 520, damping: 38, mass: 0.35 });
-  const sy = useSpring(y, { stiffness: 520, damping: 38, mass: 0.35 });
-  const sAngle = useSpring(angle, { stiffness: 220, damping: 26 });
+  const angle = useMotionValue(20);
+
+  // Tight spring for the leaf — follows finger.
+  const sx = useSpring(x, { stiffness: 540, damping: 36, mass: 0.3 });
+  const sy = useSpring(y, { stiffness: 540, damping: 36, mass: 0.3 });
+  const sAngle = useSpring(angle, { stiffness: 180, damping: 22 });
+
+  // Slower spring for the trailing dot — lags slightly, adds depth.
+  const tx = useSpring(x, { stiffness: 180, damping: 26, mass: 0.6 });
+  const ty = useSpring(y, { stiffness: 180, damping: 26, mass: 0.6 });
 
   const lastPos = useRef({ x: 0, y: 0 });
   const lastTarget = useRef<Element | null>(null);
@@ -30,7 +47,8 @@ export function Cursor() {
       const dx = e.clientX - lastPos.current.x;
       const dy = e.clientY - lastPos.current.y;
       if (Math.hypot(dx, dy) > 1.2) {
-        angle.set((Math.atan2(dy, dx) * 180) / Math.PI);
+        // Leaf points along travel vector; +20° baseline so it never reads as a needle.
+        angle.set((Math.atan2(dy, dx) * 180) / Math.PI + 20);
       }
       lastPos.current = { x: e.clientX, y: e.clientY };
       x.set(e.clientX);
@@ -51,6 +69,7 @@ export function Cursor() {
     function onUp() {
       setClicking(false);
     }
+
     window.addEventListener("mousemove", onMove);
     window.addEventListener("mousedown", onDown);
     window.addEventListener("mouseup", onUp);
@@ -67,60 +86,84 @@ export function Cursor() {
   if (!enabled) return null;
 
   return (
-    <motion.div
-      aria-hidden
-      className="pointer-events-none fixed left-0 top-0 z-[80] -translate-x-[18%] -translate-y-1/2 will-change-transform"
-      style={{ x: sx, y: sy, rotate: sAngle }}
-      animate={{ scale: clicking ? 0.85 : hovering ? 1.25 : 1 }}
-      transition={{ type: "spring", stiffness: 320, damping: 22 }}
-    >
-      <svg
-        width="72"
-        height="20"
-        viewBox="-2 -2 76 24"
-        className="block overflow-visible drop-shadow-[0_1px_3px_rgba(255,255,255,0.45)]"
+    <>
+      {/* Trailing dot */}
+      <motion.div
+        aria-hidden
+        className="pointer-events-none fixed left-0 top-0 z-[70] h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-forest-700 shadow-[0_0_0_2px_rgba(246,241,231,0.7)]"
+        style={{ x: tx, y: ty }}
+        animate={{ opacity: hovering ? 0.4 : 0.85, scale: clicking ? 0.7 : 1 }}
+        transition={{ type: "spring", stiffness: 320, damping: 22 }}
+      />
+      {/* Leaf */}
+      <motion.div
+        aria-hidden
+        className="pointer-events-none fixed left-0 top-0 z-[80] -translate-x-1/2 -translate-y-1/2 will-change-transform"
+        style={{ x: sx, y: sy, rotate: sAngle }}
+        animate={{ scale: clicking ? 0.85 : hovering ? 1.35 : 1 }}
+        transition={{ type: "spring", stiffness: 280, damping: 22 }}
       >
-        {/* trailing thread (dashed) */}
-        <line
-          x1="0"
-          y1="10"
-          x2="38"
-          y2="10"
-          stroke="#344E41"
-          strokeOpacity="0.45"
-          strokeWidth="1.4"
-          strokeDasharray="3 4"
-          strokeLinecap="round"
-        />
-        {/* sand outline around needle for contrast on dark backgrounds */}
-        <g stroke="#F6F1E7" strokeWidth="2.6" strokeLinecap="round" fill="none">
-          <circle cx="40" cy="10" r="3.4" />
-          <line x1="43.4" y1="10" x2="62" y2="10" />
-          <path d="M62 6.5 L70 10 L62 13.5 Z" />
-        </g>
-        {/* needle body */}
-        <g>
-          <circle
-            cx="40"
-            cy="10"
-            r="3.4"
+        <motion.svg
+          width="28"
+          height="28"
+          viewBox="-2 -2 40 40"
+          className="block overflow-visible drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+          animate={{ rotate: [0, -3, 3, 0] }}
+          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          {/* Sand halo for contrast on dark hero */}
+          <path
+            d="M18 2 C8 6, 3 18, 7 30 C11 24, 17 20, 26 16 C18 22, 14 28, 16 34 C28 34, 34 22, 34 14 C34 6, 28 2, 18 2 Z"
             fill="none"
+            stroke="#F6F1E7"
+            strokeWidth="3.5"
+            strokeLinejoin="round"
+          />
+          {/* Leaf body */}
+          <path
+            d="M18 2 C8 6, 3 18, 7 30 C11 24, 17 20, 26 16 C18 22, 14 28, 16 34 C28 34, 34 22, 34 14 C34 6, 28 2, 18 2 Z"
+            fill="#588157"
             stroke="#344E41"
             strokeWidth="1.6"
+            strokeLinejoin="round"
           />
-          <line
-            x1="43.4"
-            y1="10"
-            x2="62"
-            y2="10"
-            stroke="#344E41"
-            strokeWidth="1.8"
+          {/* Highlight along upper edge */}
+          <path
+            d="M18 2 C12 5, 8 12, 8 22"
+            stroke="#A3B98C"
+            strokeWidth="1.1"
+            fill="none"
             strokeLinecap="round"
           />
-          <path d="M62 6.5 L70 10 L62 13.5 Z" fill="#344E41" />
-          <circle cx="40" cy="10" r="1.4" fill="#588157" />
-        </g>
-      </svg>
-    </motion.div>
+          {/* Midrib */}
+          <path
+            d="M18 2 C16 12, 18 22, 24 32"
+            stroke="#1B2A20"
+            strokeWidth="1.1"
+            strokeOpacity="0.7"
+            fill="none"
+            strokeLinecap="round"
+          />
+          {/* Vein left */}
+          <path
+            d="M17 8 L12 14"
+            stroke="#1B2A20"
+            strokeWidth="0.6"
+            strokeOpacity="0.45"
+            fill="none"
+            strokeLinecap="round"
+          />
+          {/* Vein right */}
+          <path
+            d="M19 16 L26 18"
+            stroke="#1B2A20"
+            strokeWidth="0.6"
+            strokeOpacity="0.45"
+            fill="none"
+            strokeLinecap="round"
+          />
+        </motion.svg>
+      </motion.div>
+    </>
   );
 }

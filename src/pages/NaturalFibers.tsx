@@ -20,7 +20,7 @@ export default function NaturalFibers() {
           </>
         }
         lede="Each plant brings its own properties, its own communities, and its own place in a sustainable material future."
-        image="https://images.unsplash.com/photo-1646750421466-a04e689254d4?auto=format&fit=crop&w=2400&q=80"
+        image="https://images.unsplash.com/photo-1646750421466-a04e689254d4?auto=format&fit=crop&w=2880&q=90"
         imageAlt="Close-up of natural fiber threads on a loom"
       />
       <FiberDeepDive />

@@ -11,7 +11,7 @@ export function FounderCard() {
           <Reveal className="md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-forest-100">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=2000&q=90"
                 alt="Roshan Ojha, founder of Navya Engineering Solution"
                 className="h-full w-full object-cover"
               />
