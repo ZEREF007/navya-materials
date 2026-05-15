@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 50% 95%;
+    --foreground: 140 28% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 28% 12%;
+
+    --popover: 42 50% 97%;
+    --popover-foreground: 140 28% 12%;
+
+    --primary: 140 22% 24%;
+    --primary-foreground: 42 50% 97%;
+
+    --secondary: 99 21% 42%;
+    --secondary-foreground: 42 50% 97%;
+
+    --muted: 42 30% 90%;
+    --muted-foreground: 140 12% 36%;
+
+    --accent: 38 47% 70%;
+    --accent-foreground: 140 28% 12%;
+
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 42 50% 97%;
+
+    --border: 42 20% 84%;
+    --input: 42 20% 84%;
+    --ring: 140 22% 24%;
+
+    --radius: 0.625rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "ss01", "ss02", "cv11";
+    font-variant-numeric: lining-nums proportional-nums;
+  }
+
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tightish;
+    font-feature-settings: "ss01", "ss02";
+  }
+
+  /* Fraunces optical tuning */
+  .display {
+    font-family: "Fraunces", Georgia, serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 0;
+  }
+}
+
+@layer components {
+  .container-prose {
+    @apply mx-auto w-full max-w-7xl px-6 md:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-eyebrow text-secondary;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-px w-6 bg-secondary/60;
+  }
+
+  .section {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .grain-overlay {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .grain-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: var(--tw-bg-image, none);
+    mix-blend-mode: multiply;
+    opacity: 0.18;
+    z-index: 1;
+  }
+
+  .underline-grow {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    transition: background-size 0.4s ease;
+  }
+
+  .underline-grow:hover {
+    background-size: 100% 1px;
+  }
+
+  .leaf-divider {
+    @apply mx-auto flex items-center gap-3 text-secondary/70;
+  }
+
+  .leaf-divider::before,
+  .leaf-divider::after {
+    content: "";
+    @apply h-px w-12 bg-current;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
