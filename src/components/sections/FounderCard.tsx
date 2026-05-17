@@ -11,26 +11,48 @@ export function FounderCard() {
       <Container>
         <div className="grid items-center gap-12 md:grid-cols-12 lg:gap-16">
           <Reveal className="md:col-span-5">
-            <div className="group relative aspect-[4/5] overflow-hidden rounded-3xl bg-forest-100">
+            <div className="group relative aspect-[4/5] overflow-hidden rounded-3xl bg-forest-900 isolate">
+              {/* Photograph, rendered as a tonal layer underneath the duotone wash */}
               <ImageWithFallback
                 src={ROSHAN}
                 alt="Roshan Ojha, founder of Navya Engineering Solution"
-                className="h-full w-full object-cover [object-position:62%_28%] transition-transform [transition-duration:1200ms] ease-out group-hover:scale-[1.04]"
+                className="h-full w-full object-cover [object-position:62%_30%] [filter:grayscale(1)_contrast(1.08)_brightness(0.95)] transition-transform [transition-duration:1400ms] ease-out group-hover:scale-[1.04]"
               />
-              {/* warm tint to lift the cool wall blue toward brand palette */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-forest-900/15 via-transparent to-accent/15 mix-blend-multiply" />
-              {/* bottom legibility gradient */}
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-forest-900/70 via-forest-900/30 to-transparent" />
-              {/* corner badge */}
-              <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-sand-100/40 bg-forest-900/55 px-3 py-1.5 text-[10px] uppercase tracking-eyebrow text-sand-50 backdrop-blur">
+              {/* Duotone wash: forest-700 highlights, sand-100 shadows → editorial sage monochrome */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 bg-gradient-to-br from-forest-700 to-forest-900 mix-blend-color opacity-90"
+              />
+              {/* Subtle warm lift in the upper right */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(216,201,163,0.18),transparent_60%)]"
+              />
+              {/* Film grain */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 bg-grain opacity-25 mix-blend-overlay"
+              />
+              {/* Inner vignette for editorial portrait feel */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 shadow-[inset_0_0_120px_rgba(27,42,32,0.55)] rounded-3xl"
+              />
+              {/* Bottom legibility gradient */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-forest-900/85 via-forest-900/35 to-transparent"
+              />
+              {/* Glass pill — top-left */}
+              <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-sand-100/30 bg-forest-900/45 px-3 py-1.5 text-[10px] uppercase tracking-eyebrow text-sand-50 backdrop-blur">
                 Kathmandu · Founder
               </div>
-              {/* name block */}
+              {/* Name + role block — bottom-left */}
               <div className="absolute bottom-6 left-6 right-6 text-sand-50">
                 <p className="font-mono text-[10px] uppercase tracking-eyebrow text-sand-200/85">
-                  Mechanical Engineer · Founder
+                  Mechanical Engineer · Founder, 2023
                 </p>
-                <p className="mt-1 font-display text-2xl md:text-3xl font-medium leading-tight">
+                <p className="mt-1.5 font-display text-2xl md:text-3xl font-medium leading-tight">
                   Roshan Ojha
                 </p>
               </div>
