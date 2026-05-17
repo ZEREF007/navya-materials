@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
+const LOGO = `${import.meta.env.BASE_URL}images/logo.jpg`;
+
 export function Logo({ className, mono = false }: { className?: string; mono?: boolean }) {
   return (
     <Link
@@ -10,24 +12,17 @@ export function Logo({ className, mono = false }: { className?: string; mono?: b
     >
       <span
         aria-hidden
-        className={cn(
-          "grid h-9 w-9 place-items-center rounded-full transition-transform duration-500 group-hover:rotate-12",
-          mono ? "bg-background/90 text-primary" : "bg-primary text-primary-foreground"
-        )}
+        className="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-white shadow-[0_0_0_1px_rgba(27,42,32,0.08)] transition-transform duration-500 group-hover:rotate-6"
       >
-        <svg viewBox="0 0 32 32" className="h-5 w-5" fill="none">
-          <path
-            d="M16 4 C8 10, 7 18, 11 25 C13 22, 16 19, 20 17 C16 21, 13 26, 14 30 C22 30, 27 22, 27 14 C27 8, 22 4, 16 4 Z"
-            fill="currentColor"
-          />
-          <path
-            d="M16 4 C13 13, 14 22, 18 28"
-            stroke="currentColor"
-            strokeOpacity="0.45"
-            strokeWidth="0.8"
-            fill="none"
-          />
-        </svg>
+        <img
+          src={LOGO}
+          alt=""
+          width="40"
+          height="40"
+          className="h-full w-full object-cover scale-110"
+          loading="eager"
+          decoding="async"
+        />
       </span>
       <span className="flex flex-col leading-tight">
         <span
