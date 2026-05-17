@@ -7,7 +7,7 @@ export function StatsStrip() {
   return (
     <section className="relative bg-forest-800 text-sand-100">
       <div aria-hidden className="absolute inset-0 bg-grain opacity-25 mix-blend-overlay" />
-      <Container className="relative py-20 md:py-24">
+      <Container className="relative py-12 md:py-16">
         <div className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4 md:gap-x-12">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.05}>

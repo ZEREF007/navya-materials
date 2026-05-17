@@ -13,7 +13,7 @@ import { ImageWithFallback } from "@/components/common/ImageWithFallback";
 export function FeaturedHighlight() {
   return (
     <section className="bg-background">
-      <Container className="py-16 md:py-24 lg:py-28">
+      <Container className="py-10 md:py-14 lg:py-18">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">
             In focus

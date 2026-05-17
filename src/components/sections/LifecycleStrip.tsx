@@ -39,7 +39,7 @@ const steps: Step[] = [
 export function LifecycleStrip() {
   return (
     <section className="relative bg-sand-100 border-y border-foreground/10">
-      <Container className="py-16 md:py-20 lg:py-24">
+      <Container className="py-10 md:py-14 lg:py-16">
         <Reveal className="max-w-3xl">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">
             The lifecycle

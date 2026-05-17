@@ -56,7 +56,7 @@ const regions: Region[] = [
  */
 export function MaterialsAtlas() {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-background">
+    <section className="py-10 md:py-14 lg:py-16 bg-background">
       <Container>
         <Reveal>
           <h2 className="display text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium uppercase tracking-tighter2 leading-[0.95] text-foreground">
@@ -67,7 +67,7 @@ export function MaterialsAtlas() {
           </p>
         </Reveal>
 
-        <div className="mt-12 grid items-center gap-10 md:grid-cols-12 md:gap-14 lg:gap-16">
+        <div className="mt-8 grid items-center gap-10 md:grid-cols-12 md:gap-14 lg:gap-16">
           <Reveal className="md:col-span-5">
             <div className="relative rounded-3xl border border-foreground/10 bg-sand-50 p-6 md:p-8">
               <svg

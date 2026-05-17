@@ -5,7 +5,7 @@ import { focusAreas, methodology } from "@/data/research";
 export function FocusAreas() {
   return (
     <>
-      <section className="py-16 md:py-20 lg:py-24 bg-background">
+      <section className="py-10 md:py-14 lg:py-16 bg-background">
         <Container>
           <Reveal>
             <h2 className="display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase tracking-tighter2 leading-[0.95] text-foreground">
@@ -31,7 +31,7 @@ export function FocusAreas() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-24 bg-sand-50">
+      <section className="py-10 md:py-14 lg:py-16 bg-sand-50">
         <Container>
           <Reveal>
             <h2 className="display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase tracking-tighter2 leading-[0.95] text-foreground">

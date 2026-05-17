@@ -5,23 +5,25 @@ import { products } from "@/data/products";
 
 const statusStyles: Record<string, string> = {
   Pilot: "bg-secondary text-secondary-foreground",
-  Prototype: "bg-accent text-accent-foreground",
-  "In R&D": "bg-foreground/10 text-foreground",
+  "R&D": "bg-foreground/10 text-foreground",
+  "Prototyping Stage": "bg-accent text-accent-foreground",
+  "Planning Stage": "bg-sand-200 text-foreground",
 };
 
 export function ProductsGrid() {
   return (
-    <section className="section bg-background">
+    <section className="py-10 md:py-14 lg:py-16 bg-background">
       <Container>
         <Reveal>
-          <p className="eyebrow">Catalogue</p>
-          <h2 className="display mt-5 max-w-3xl text-balance text-4xl md:text-5xl font-medium leading-[1.05]">
-            Materials in the lab,{" "}
-            <span className="italic font-light">and on their way out.</span>
+          <h2 className="display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase tracking-tighter2 leading-[0.95] text-foreground">
+            Catalogue
           </h2>
+          <p className="mt-4 max-w-2xl font-display italic text-lg md:text-xl lg:text-2xl font-light text-muted-foreground leading-snug">
+            Materials in the lab, and on their way out.
+          </p>
         </Reveal>
 
-        <StaggerGroup className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <StaggerGroup className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (
             <StaggerItem key={p.name} className="group flex flex-col">
               <div className="relative aspect-[5/6] overflow-hidden rounded-3xl bg-sand-100">

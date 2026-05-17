@@ -4,7 +4,7 @@ import { ImageWithFallback } from "@/components/common/ImageWithFallback";
 
 export function AboutStory({ compact = false }: { compact?: boolean }) {
   return (
-    <section className={compact ? "py-16" : "py-14 md:py-20 lg:py-24"}>
+    <section className={compact ? "py-10" : "py-10 md:py-14 lg:py-18"}>
       <Container>
         <Reveal>
           <h2 className="display text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium uppercase leading-[0.95] tracking-tighter2 text-foreground">
@@ -12,7 +12,7 @@ export function AboutStory({ compact = false }: { compact?: boolean }) {
           </h2>
         </Reveal>
 
-        <div className="mt-12 md:mt-16 grid gap-10 md:grid-cols-12 md:gap-12 lg:gap-16 items-start">
+        <div className="mt-8 md:mt-10 grid gap-10 md:grid-cols-12 md:gap-12 lg:gap-16 items-start">
           <Reveal className="md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-forest-100">
               <ImageWithFallback

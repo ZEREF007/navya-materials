@@ -1,7 +1,7 @@
 export type Product = {
   name: string;
   category: string;
-  status: "Prototype" | "In R&D" | "Pilot";
+  status: "Pilot" | "R&D" | "Prototyping Stage" | "Planning Stage";
   body: string;
   image: string;
   alt: string;
@@ -20,17 +20,17 @@ export const products: Product[] = [
   {
     name: "Hemp Composite Board",
     category: "Construction",
-    status: "Prototype",
+    status: "R&D",
     body: "A low-carbon hemp-bonded panel for interior partitions, insulation, and modular furniture.",
     image:
       "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=2000&q=90",
     alt: "Hemp composite board sample",
   },
   {
-    name: "Allo Heritage Yarn",
+    name: "Allo and Hemp Yarn",
     category: "Textile",
-    status: "Pilot",
-    body: "Hand-processed Himalayan nettle yarn in heritage counts, for designers building traceable collections.",
+    status: "Planning Stage",
+    body: "A blended yarn pairing Himalayan nettle with hemp bast, hand-processed in heritage counts for designers building traceable collections.",
     image:
       "https://images.unsplash.com/photo-1488747279002-c8523379faaa?auto=format&fit=crop&w=2000&q=90",
     alt: "Hand-spun heritage yarn",
@@ -38,25 +38,25 @@ export const products: Product[] = [
   {
     name: "Rural Decorticator",
     category: "Machinery",
-    status: "In R&D",
+    status: "R&D",
     body: "A compact, manually operable fiber extraction unit designed for rural workshops without grid power.",
     image:
       "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2000&q=90",
     alt: "Compact fiber processing machine",
   },
   {
-    name: "Bio-composite Tiles",
+    name: "Bio-composite Construction Material",
     category: "Construction",
-    status: "In R&D",
-    body: "Mixed-fiber tiles for low-impact flooring and wall finishes. Compostable at end of life.",
+    status: "Prototyping Stage",
+    body: "Mixed-fiber composite for low-impact tiles, panels, and wall finishes. Compostable at end of life.",
     image:
       "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=2000&q=90",
-    alt: "Bio-composite material tiles",
+    alt: "Bio-composite construction material sample",
   },
   {
     name: "Mixed-Fiber Cordage",
     category: "Industrial",
-    status: "Prototype",
+    status: "Planning Stage",
     body: "Blended hemp and allo cordage for industrial and agricultural use. Strong, biodegradable, locally produced.",
     image:
       "https://images.unsplash.com/photo-1535970793482-07de93762dc4?auto=format&fit=crop&w=2000&q=90",

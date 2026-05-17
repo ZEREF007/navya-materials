@@ -33,9 +33,9 @@ export const stories: Story[] = [
     alt: "Hand-spun fiber in a workshop",
   },
   {
-    title: "Carrying allo forward",
+    title: "Carrying Allo and Hemp Forward",
     location: "Himalayan foothills",
-    body: "Traditional allo processing is knowledge passed down through generations. We work alongside these communities to keep the hand methods alive while opening fairer trade routes to designers and brands.",
+    body: "Traditional allo and hemp processing are knowledge systems passed down through generations. We work alongside local communities to preserve these handcrafting methods while creating fairer pathways that connect artisans and natural fiber producers with designers, brands, and global markets.",
     image:
       "https://images.unsplash.com/photo-1731044900377-93da03bf0675?auto=format&fit=crop&w=2400&q=90",
     alt: "Prayer flags on a Himalayan mountainside",

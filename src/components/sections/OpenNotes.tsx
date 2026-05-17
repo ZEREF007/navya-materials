@@ -12,7 +12,7 @@ import { notes } from "@/data/notes";
 export function OpenNotes() {
   return (
     <section className="bg-sand-50 border-t border-foreground/10">
-      <Container className="py-16 md:py-20 lg:py-24">
+      <Container className="py-10 md:py-14 lg:py-16">
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>

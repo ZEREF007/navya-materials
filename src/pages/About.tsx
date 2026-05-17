@@ -2,10 +2,8 @@ import { Seo } from "@/lib/seo";
 import { SubHero } from "@/components/sections/SubHero";
 import { AboutStory } from "@/components/sections/AboutStory";
 import { FounderCard } from "@/components/sections/FounderCard";
-import { Timeline } from "@/components/sections/Timeline";
 import { PillarsStrip } from "@/components/sections/PillarsStrip";
 import { CTASection } from "@/components/sections/CTASection";
-import { OrganicDivider } from "@/components/common/OrganicDivider";
 
 export default function About() {
   return (
@@ -35,8 +33,6 @@ export default function About() {
       <AboutStory compact />
       <FounderCard />
       <PillarsStrip />
-      <OrganicDivider />
-      <Timeline />
       <CTASection
         title="Want to work together?"
         body="From research collaborations to manufacturing partnerships, we're open to conversations that lead to real-world impact."
