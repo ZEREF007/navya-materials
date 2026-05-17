@@ -17,8 +17,8 @@ export function FeaturedHighlight() {
           <Reveal className="md:col-span-7">
             <div className="relative aspect-[5/4] md:aspect-[6/5] overflow-hidden rounded-3xl bg-forest-100">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=2400&q=90"
-                alt="Hemp fiber being prepared for textile spinning"
+                src="https://images.unsplash.com/photo-1571756924932-cc855ef6af92?auto=format&fit=crop&w=2400&q=90"
+                alt="Close-up of natural hemp fiber strands"
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-forest-900/45 via-transparent to-transparent" />
