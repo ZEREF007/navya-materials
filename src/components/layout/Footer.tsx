@@ -5,19 +5,19 @@ import { Container } from "@/components/common/Container";
 import { navItems } from "@/data/nav";
 
 const socials = [
-  { label: "LinkedIn", href: "#", icon: Linkedin },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/navya-materials", icon: Linkedin },
   { label: "Facebook", href: "#", icon: Facebook },
   { label: "Instagram", href: "#", icon: Instagram },
 ];
 
 export function Footer() {
   return (
-    <footer className="relative mt-24 bg-forest-900 text-sand-100">
+    <footer className="relative mt-16 bg-forest-900 text-sand-100">
       <div
         aria-hidden
         className="absolute inset-0 bg-grain opacity-25 mix-blend-overlay pointer-events-none"
       />
-      <Container className="relative py-20 md:py-24">
+      <Container className="relative py-14 md:py-16">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr] lg:gap-16">
           <div className="space-y-6">
             <Logo mono />
@@ -36,18 +36,18 @@ export function Footer() {
                 <span>Kriti Marga, Koteshowor-32, Kathmandu, Nepal</span>
               </a>
               <a
-                href="mailto:hello@navyamaterials.com"
+                href="mailto:navyamaterials.official@gmail.com"
                 className="flex items-center gap-3 hover:text-sand-50 transition-colors"
               >
                 <Mail className="h-4 w-4 shrink-0" />
-                <span>hello@navyamaterials.com</span>
+                <span>navyamaterials.official@gmail.com</span>
               </a>
               <a
-                href="https://wa.me/9770000000000"
+                href="tel:+9779868583973"
                 className="flex items-center gap-3 hover:text-sand-50 transition-colors"
               >
                 <Phone className="h-4 w-4 shrink-0" />
-                <span>WhatsApp message</span>
+                <span>+977-9868583973</span>
               </a>
             </div>
           </div>
@@ -81,6 +81,8 @@ export function Footer() {
                   <li key={s.label}>
                     <a
                       href={s.href}
+                      target={s.href.startsWith("http") ? "_blank" : undefined}
+                      rel={s.href.startsWith("http") ? "noreferrer noopener" : undefined}
                       className="inline-flex items-center gap-3 text-sand-200/85 hover:text-sand-50 transition-colors"
                     >
                       <Icon className="h-4 w-4" /> {s.label}
@@ -99,13 +101,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-sand-100/10 pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 border-t border-sand-100/10 pt-6">
           <p className="text-xs text-sand-200/70">
             © {new Date().getFullYear()} Navya Engineering Solution. Based in Nepal. Working
             toward sustainable material innovation through natural fibers and engineering.
-          </p>
-          <p className="text-xs text-sand-200/60 font-mono">
-            Crafted with care · सस्तो होइन, सच्चा।
           </p>
         </div>
       </Container>

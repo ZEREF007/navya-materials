@@ -5,7 +5,7 @@ import { WhatWeDo } from "@/components/sections/WhatWeDo";
 import { FeaturedHighlight } from "@/components/sections/FeaturedHighlight";
 import { MaterialsAtlas } from "@/components/sections/MaterialsAtlas";
 import { PullQuote } from "@/components/sections/PullQuote";
-import { OpenNotes } from "@/components/sections/OpenNotes";
+import { FocusAreas } from "@/components/sections/FocusAreas";
 import { StatsStrip } from "@/components/sections/StatsStrip";
 import { CTASection } from "@/components/sections/CTASection";
 
@@ -25,7 +25,7 @@ export default function Home() {
         quote="The materials of the next century already exist. They are in the fields, the forests, and the hands of the people who have always worked with them."
         attribution="Roshan Ojha, Founder"
       />
-      <OpenNotes />
+      <FocusAreas focusOnly variant="sand" />
       <StatsStrip />
       <CTASection
         title="Build something with us, from fiber to finished form."

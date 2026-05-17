@@ -5,14 +5,14 @@ import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from "lucide-react
 const channels = [
   {
     label: "Email",
-    value: "hello@navyamaterials.com",
-    href: "mailto:hello@navyamaterials.com",
+    value: "navyamaterials.official@gmail.com",
+    href: "mailto:navyamaterials.official@gmail.com",
     icon: Mail,
   },
   {
-    label: "WhatsApp",
-    value: "Send a message",
-    href: "https://wa.me/9770000000000",
+    label: "Phone",
+    value: "+977-9868583973",
+    href: "tel:+9779868583973",
     icon: Phone,
   },
   {
@@ -24,7 +24,11 @@ const channels = [
 ];
 
 const socials = [
-  { label: "LinkedIn", href: "#", icon: Linkedin },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/navya-materials",
+    icon: Linkedin,
+  },
   { label: "Facebook", href: "#", icon: Facebook },
   { label: "Instagram", href: "#", icon: Instagram },
 ];
@@ -32,7 +36,7 @@ const socials = [
 export function ContactDetails() {
   return (
     <section className="border-b border-foreground/10 bg-sand-50">
-      <Container className="py-16 md:py-20">
+      <Container className="py-10 md:py-14">
         <Reveal>
           <div className="grid gap-12 md:grid-cols-3 md:gap-16">
             {channels.map((c) => {
@@ -69,6 +73,8 @@ export function ContactDetails() {
                 <a
                   key={s.label}
                   href={s.href}
+                  target={s.href.startsWith("http") ? "_blank" : undefined}
+                  rel={s.href.startsWith("http") ? "noreferrer noopener" : undefined}
                   className="inline-flex items-center gap-2 text-sm hover:text-primary transition-colors"
                 >
                   <Icon className="h-4 w-4" /> {s.label}

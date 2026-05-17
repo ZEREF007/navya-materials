@@ -2,10 +2,22 @@ import { Container } from "@/components/common/Container";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/common/Reveal";
 import { focusAreas, methodology } from "@/data/research";
 
-export function FocusAreas() {
+type Props = {
+  /** Background tone of the focus-areas block. Methodology is always sand. */
+  variant?: "default" | "sand";
+  /** Render only the focus-areas block (skip Methodology). */
+  focusOnly?: boolean;
+};
+
+export function FocusAreas({ variant = "default", focusOnly = false }: Props) {
   return (
     <>
-      <section className="py-10 md:py-14 lg:py-16 bg-background">
+      <section
+        className={
+          "py-10 md:py-14 lg:py-16 " +
+          (variant === "sand" ? "bg-sand-50" : "bg-background")
+        }
+      >
         <Container>
           <Reveal>
             <h2 className="display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase tracking-tighter2 leading-[0.95] text-foreground">
@@ -31,35 +43,37 @@ export function FocusAreas() {
         </Container>
       </section>
 
-      <section className="py-10 md:py-14 lg:py-16 bg-sand-50">
-        <Container>
-          <Reveal>
-            <h2 className="display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase tracking-tighter2 leading-[0.95] text-foreground">
-              Methodology
-            </h2>
-            <p className="mt-4 max-w-3xl whitespace-nowrap overflow-hidden font-display italic text-base md:text-lg lg:text-xl font-light text-muted-foreground leading-snug">
-              Source. Characterize. Engineer. Pilot.
-            </p>
-            <p className="mt-6 max-w-2xl text-pretty text-base md:text-lg leading-relaxed text-foreground/75">
-              We don&apos;t romanticise process. The work is iterative, hands-on, and only
-              meaningful where lab insight meets a village workshop.
-            </p>
-          </Reveal>
+      {focusOnly ? null : (
+        <section className="py-10 md:py-14 lg:py-16 bg-sand-50">
+          <Container>
+            <Reveal>
+              <h2 className="display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium uppercase tracking-tighter2 leading-[0.95] text-foreground">
+                Methodology
+              </h2>
+              <p className="mt-4 max-w-3xl whitespace-nowrap overflow-hidden font-display italic text-base md:text-lg lg:text-xl font-light text-muted-foreground leading-snug">
+                Source. Characterize. Engineer. Pilot.
+              </p>
+              <p className="mt-6 max-w-2xl text-pretty text-base md:text-lg leading-relaxed text-foreground/75">
+                We don&apos;t romanticise process. The work is iterative, hands-on, and only
+                meaningful where lab insight meets a village workshop.
+              </p>
+            </Reveal>
 
-          <StaggerGroup className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {methodology.map((m) => (
-              <StaggerItem
-                key={m.step}
-                className="rounded-3xl border border-foreground/10 bg-card p-7"
-              >
-                <p className="font-mono text-sm text-primary">{m.step}</p>
-                <h3 className="mt-4 font-display text-xl md:text-2xl font-medium">{m.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{m.body}</p>
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
-        </Container>
-      </section>
+            <StaggerGroup className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {methodology.map((m) => (
+                <StaggerItem
+                  key={m.step}
+                  className="rounded-3xl border border-foreground/10 bg-card p-7"
+                >
+                  <p className="font-mono text-sm text-primary">{m.step}</p>
+                  <h3 className="mt-4 font-display text-xl md:text-2xl font-medium">{m.title}</h3>
+                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{m.body}</p>
+                </StaggerItem>
+              ))}
+            </StaggerGroup>
+          </Container>
+        </section>
+      )}
     </>
   );
 }

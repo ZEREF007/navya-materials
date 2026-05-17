@@ -30,7 +30,7 @@ const regions: Region[] = [
     id: "hemp",
     name: "Hemp Fiber",
     scientific: "Cannabis sativa",
-    region: "Mid-hills, central Nepal",
+    region: "Mid-hills, central and western Nepal",
     elevation: "1000–2000 m",
     property: "Drought-tolerant · UV resistant · long staple",
     x: 50,

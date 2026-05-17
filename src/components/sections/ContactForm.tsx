@@ -38,7 +38,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
     const body = encodeURIComponent(
       `${values.message}\n\n${values.name}${values.company ? ` (${values.company})` : ""}\n${values.email}`
     );
-    window.location.href = `mailto:hello@navyamaterials.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:navyamaterials.official@gmail.com?subject=${encodeURIComponent(
       values.subject
     )}&body=${body}`;
     reset();
