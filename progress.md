@@ -194,3 +194,86 @@ Files touched:
 Test: `pnpm build` → ✓ 2014 modules in 2.01s, no errors. `grep -rn "—" src/ index.html` → empty.
 Next: commit + push + deploy
 
+
+---
+
+## [2026-05-16 01:00] phase1.8-editorial | MarqueeStrip + NumberTicker + PullQuote + OrganicDivider
+
+Status: done
+Files touched: `src/components/sections/{MarqueeStrip,PullQuote}.tsx` (new), `src/components/common/{NumberTicker,OrganicDivider}.tsx` (new), `src/components/sections/StatsStrip.tsx` (NumberTicker wired)
+Test: `pnpm build` → ✓ build successful; preview shows marquee scroll, stat numbers count up on viewport
+Next: heading hierarchy flip + size revision
+
+---
+
+## [2026-05-16 01:15] phase1.9-heading-flip | Eyebrow becomes loud H2; tagline becomes quiet subhead; `--` hairlines purged
+
+Status: done
+Files touched: `src/components/common/SectionHeading.tsx` (eyebrow promoted to display H2; title demoted to italic subhead), `src/index.css` (.leaf-divider removed), `src/components/common/OrganicDivider.tsx` (flanking strokes removed, leaf only)
+Notes: heading sizes iterated 3 rounds — too big → smaller → 2 steps smaller. Final default text-2xl md:text-3xl lg:text-4xl xl:text-5xl. Tagline text-lg md:text-xl lg:text-2xl. Body 16-18 px.
+Test: visual scan
+Next: drop Lenis (text blur on scroll)
+
+---
+
+## [2026-05-16 01:30] phase1.9b-blur-fix | Lenis dropped + hero parallax dropped + Reveal releases GPU layer
+
+Status: done
+Files touched: `src/components/layout/Layout.tsx` (SmoothScroll unmounted), `src/index.css` (Lenis classes removed, scroll-behavior: smooth restored), `src/components/sections/Hero.tsx` (useScroll/useTransform removed; image now plain `<div>` wrapper), `src/components/common/Reveal.tsx` (post-animation re-render as plain div via onAnimationComplete)
+Test: scroll fast on dev — text crisp. Verified across Home + About + Community.
+Next: AboutStory layout flip (heading promoted, image inline caption)
+
+---
+
+## [2026-05-16 01:45] phase2.0-home-restructure | LifecycleStrip + FeaturedHighlight + OpenNotes + MaterialsAtlas; AboutStory layout flip
+
+Status: done
+Files touched:
+- `src/components/sections/LifecycleStrip.tsx` (new — 5-step process)
+- `src/components/sections/FeaturedHighlight.tsx` (new — editorial split card)
+- `src/components/sections/OpenNotes.tsx` (new — 3 journal cards)
+- `src/components/sections/MaterialsAtlas.tsx` (new — Nepal SVG + 3-region list)
+- `src/data/notes.ts` (new — 3 lab note entries)
+- `src/components/sections/AboutStory.tsx` (heading promoted to top, image below w/ caption, eyebrow dropped)
+- `src/pages/Home.tsx` (drop PillarsStrip + AboutStory + OrganicDivider; add LifecycleStrip + FeaturedHighlight + OpenNotes + MaterialsAtlas, replace FibersGrid preview with MaterialsAtlas)
+- `src/pages/About.tsx` (drop MarqueeStrip)
+Test: `pnpm build` → all chunks valid; visual verified
+Next: spec round 1 (spacing + story 3 + Timeline drop + Products statuses)
+
+---
+
+## [2026-05-16 02:00] phase2.1-spec1 | Tighter spacing + story 3 rewrite + About drops Timeline + Products status overhaul
+
+Status: done
+Files touched: `src/index.css` (.section py reduced), all section components (per-section py reduced), `src/data/impact.ts` (story 3 renamed + rewritten), `src/pages/About.tsx` (Timeline removed), `src/data/products.ts` (status union widened: Pilot / R&D / Prototyping Stage / Planning Stage; product renames), `src/components/sections/ProductsGrid.tsx` (new statusStyles, eyebrow → big heading)
+Notes: status mapping → Banana-fiber Textile (Pilot, unchanged), Hemp Composite Board (Prototype → R&D), Allo Heritage Yarn (renamed Allo and Hemp Yarn, Planning Stage, body rewritten), Rural Decorticator (In R&D → R&D), Bio-composite Tiles (renamed Bio-composite Construction Material, Prototyping Stage), Mixed-Fiber Cordage (Prototype → Planning Stage).
+Test: `pnpm build` → ✓ 2014 modules
+Next: spec round 2
+
+---
+
+## [2026-05-16 02:15] phase2.2-spec2 | FeaturedHighlight swap + atlas region fix + Home Focus Areas + real contact info + footer trim
+
+Status: done
+Files touched:
+- `src/components/sections/FeaturedHighlight.tsx` (drop 'In Focus' eyebrow; swap Allo Heritage Yarn → Hemp Fiber Textile, new copy + image + R&D · 2026 badge)
+- `src/components/sections/MaterialsAtlas.tsx` (hemp region: 'Mid-hills, central Nepal' → 'Mid-hills, central and western Nepal')
+- `src/components/sections/FocusAreas.tsx` (refactored: new `variant` + `focusOnly` props; Methodology block optional)
+- `src/pages/Home.tsx` (drop OpenNotes; add <FocusAreas focusOnly variant="sand" />)
+- `src/components/layout/Footer.tsx` (email → navyamaterials.official@gmail.com; phone → +977-9868583973; LinkedIn → https://www.linkedin.com/company/navya-materials; 'Crafted with care' line removed; spacing tightened mt-24 → mt-16)
+- `src/components/sections/ContactDetails.tsx` (same contact updates; WhatsApp slot replaced w/ Phone tel: link)
+- `src/components/sections/ContactForm.tsx` (mailto target updated)
+Test: `pnpm build` → ✓
+Next: spec round 3
+
+---
+
+## [2026-05-16 02:30] phase2.3-spec3 | WhatWeDo one-line tagline + bold navbar + docs
+
+Status: done
+Files touched:
+- `src/components/sections/WhatWeDo.tsx` (title <br> + italic span removed; now single inline `Five disciplines, one shared mission.` wrapped in `whitespace-nowrap`)
+- `src/components/layout/Header.tsx` (desktop NavLink gained `font-semibold`; mobile NavLink also `font-semibold`; muted-foreground swapped to foreground/70 for stronger inactive state)
+- `handoff.md`, `progress.md` (full audit + rewrite reflecting phases 1.7 → 2.3)
+Test: `pnpm build` → ✓ no errors
+Next: commit + push

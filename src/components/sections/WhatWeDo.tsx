@@ -12,12 +12,9 @@ export function WhatWeDo() {
           <SectionHeading
             eyebrow="What we do"
             title={
-              <>
-                Five disciplines, <br className="hidden md:block" />
-                <span className="italic font-light text-muted-foreground">
-                  one shared mission.
-                </span>
-              </>
+              <span className="whitespace-nowrap">
+                Five disciplines, one shared mission.
+              </span>
             }
             lede="Plant, processed fiber, finished form. We work across the chain so local materials can carry both story and performance."
             size="lg"

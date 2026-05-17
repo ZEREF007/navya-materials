@@ -49,10 +49,10 @@ export function Header() {
               end={item.href === "/"}
               className={({ isActive }) =>
                 cn(
-                  "relative px-3 py-2 text-[13px] tracking-tightish transition-colors",
+                  "relative px-3 py-2 text-[13px] font-semibold tracking-tightish transition-colors",
                   isActive
                     ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-foreground/70 hover:text-foreground"
                 )
               }
             >
@@ -98,7 +98,7 @@ export function Header() {
                     end={item.href === "/"}
                     className={({ isActive }) =>
                       cn(
-                        "block py-3 font-display text-2xl transition-colors",
+                        "block py-3 font-display font-semibold text-2xl transition-colors",
                         isActive ? "text-primary" : "text-foreground"
                       )
                     }
