@@ -2,8 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "node:path";
 
-// On CI (GitHub Pages) we set BASE_PATH=/navya-materials/.
-// Locally + on user/custom-domain hosts we serve at /.
+// Custom domain navyamaterials.com serves at root. Local dev: also root.
+// BASE_PATH env override kept for fallback (e.g. preview deploys at
+// /navya-materials/ on the github.io subpath).
 const base = process.env.BASE_PATH ?? "/";
 
 export default defineConfig({

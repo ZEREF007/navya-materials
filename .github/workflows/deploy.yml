@@ -35,9 +35,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile=false
 
-      - name: Build (GitHub Pages base path)
-        env:
-          BASE_PATH: /navya-materials/
+      # Custom domain navyamaterials.com is served at root, so no BASE_PATH.
+      # public/CNAME is auto-copied into dist/ by Vite's static asset pipeline.
+      - name: Build
         run: pnpm build:gh
 
       - name: Setup Pages
