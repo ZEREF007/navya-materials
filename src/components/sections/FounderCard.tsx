@@ -12,40 +12,35 @@ export function FounderCard() {
         <div className="grid items-center gap-12 md:grid-cols-12 lg:gap-16">
           <Reveal className="md:col-span-5">
             <div className="group relative aspect-[4/5] overflow-hidden rounded-3xl bg-forest-900 isolate">
-              {/* Photograph, rendered as a tonal layer underneath the duotone wash */}
+              {/* Stage photo, full colour with light contrast lift */}
               <ImageWithFallback
                 src={ROSHAN}
-                alt="Roshan Ojha, founder of Navya Engineering Solution"
-                className="h-full w-full object-cover [object-position:62%_30%] [filter:grayscale(1)_contrast(1.08)_brightness(0.95)] transition-transform [transition-duration:1400ms] ease-out group-hover:scale-[1.04]"
+                alt="Roshan Ojha speaking at an event"
+                className="h-full w-full object-cover [object-position:42%_30%] [filter:contrast(1.05)_saturate(0.92)] transition-transform [transition-duration:1400ms] ease-out group-hover:scale-[1.04]"
               />
-              {/* Duotone wash: forest-700 highlights, sand-100 shadows → editorial sage monochrome */}
+              {/* Subtle warm wash to bridge cool stage light → brand palette */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-0 bg-gradient-to-br from-forest-700 to-forest-900 mix-blend-color opacity-90"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-br from-forest-900/15 via-transparent to-accent/15 mix-blend-multiply"
               />
-              {/* Subtle warm lift in the upper right */}
+              {/* Top vignette for cleaner edge */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(216,201,163,0.18),transparent_60%)]"
-              />
-              {/* Film grain */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 bg-grain opacity-25 mix-blend-overlay"
-              />
-              {/* Inner vignette for editorial portrait feel */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 shadow-[inset_0_0_120px_rgba(27,42,32,0.55)] rounded-3xl"
+                className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-forest-900/55 to-transparent"
               />
               {/* Bottom legibility gradient */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-forest-900/85 via-forest-900/35 to-transparent"
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-forest-900/85 via-forest-900/35 to-transparent"
+              />
+              {/* Film grain */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 bg-grain opacity-15 mix-blend-overlay"
               />
               {/* Glass pill — top-left */}
               <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-sand-100/30 bg-forest-900/45 px-3 py-1.5 text-[10px] uppercase tracking-eyebrow text-sand-50 backdrop-blur">
-                Kathmandu · Founder
+                On stage · Kathmandu
               </div>
               {/* Name + role block — bottom-left */}
               <div className="absolute bottom-6 left-6 right-6 text-sand-50">
